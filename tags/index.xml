@@ -2,57 +2,57 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Kuro - 資安工作者的學習手記</title>
-    <link>https://kuronetwork.github.io/tags/</link>
+    <link>https://kuronetwork.me/tags/</link>
     <description>Recent content in Tags on Kuro - 資安工作者的學習手記</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <lastBuildDate>Wed, 20 May 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://kuronetwork.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kuronetwork.me/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>all</title>
-      <link>https://kuronetwork.github.io/tags/all/</link>
+      <link>https://kuronetwork.me/tags/all/</link>
       <pubDate>Wed, 20 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://kuronetwork.github.io/tags/all/</guid>
+      <guid>https://kuronetwork.me/tags/all/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Medium</title>
-      <link>https://kuronetwork.github.io/tags/medium/</link>
+      <link>https://kuronetwork.me/tags/medium/</link>
       <pubDate>Wed, 20 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://kuronetwork.github.io/tags/medium/</guid>
+      <guid>https://kuronetwork.me/tags/medium/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CTF</title>
-      <link>https://kuronetwork.github.io/tags/ctf/</link>
+      <link>https://kuronetwork.me/tags/ctf/</link>
       <pubDate>Tue, 19 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://kuronetwork.github.io/tags/ctf/</guid>
+      <guid>https://kuronetwork.me/tags/ctf/</guid>
       <description></description>
     </item>
     
     <item>
       <title>DWVA</title>
-      <link>https://kuronetwork.github.io/tags/dwva/</link>
+      <link>https://kuronetwork.me/tags/dwva/</link>
       <pubDate>Tue, 19 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://kuronetwork.github.io/tags/dwva/</guid>
+      <guid>https://kuronetwork.me/tags/dwva/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Metasploitable</title>
-      <link>https://kuronetwork.github.io/tags/metasploitable/</link>
+      <link>https://kuronetwork.me/tags/metasploitable/</link>
       <pubDate>Tue, 19 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://kuronetwork.github.io/tags/metasploitable/</guid>
+      <guid>https://kuronetwork.me/tags/metasploitable/</guid>
       <description></description>
     </item>
     
