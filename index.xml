@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kuro - 資安工作者的學習手記</title>
-    <link>https://kuronetwork.github.io/</link>
+    <link>https://kuronetwork.me/</link>
     <description>Recent content on Kuro - 資安工作者的學習手記</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <lastBuildDate>Wed, 20 May 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://kuronetwork.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kuronetwork.me/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Medium 文章一覽(置頂)</title>
-      <link>https://kuronetwork.github.io/posts/all_post/</link>
+      <link>https://kuronetwork.me/posts/all_post/</link>
       <pubDate>Wed, 20 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://kuronetwork.github.io/posts/all_post/</guid>
+      <guid>https://kuronetwork.me/posts/all_post/</guid>
       <description>所有文章目錄 Medium文章部落格: https://medium.com/blacksecurity
 CTF / 滲透測試   Root me-FTP authentication Write-up
   Hack The Box-Bastion Write
@@ -32,48 +32,48 @@ CTF / 滲透測試   Root me-FTP authentication Write-up
     
     <item>
       <title>Metasploitable - 學習筆記一覽</title>
-      <link>https://kuronetwork.github.io/posts/metasplitable/</link>
+      <link>https://kuronetwork.me/posts/metasplitable/</link>
       <pubDate>Tue, 19 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://kuronetwork.github.io/posts/metasplitable/</guid>
+      <guid>https://kuronetwork.me/posts/metasplitable/</guid>
       <description>Metasploitable - 學習筆記一覽 這邊針對我在Metasploitable 上學習的一些筆記做整理:   Metasploitable 學習筆記-Web滲透測試基礎與文件上傳漏洞教學 Metasploitable 學習筆記-DVWA Command injection 命令注入攻擊與 Reverse Shell  </description>
     </item>
     
     <item>
       <title>About Kuro</title>
-      <link>https://kuronetwork.github.io/about/</link>
+      <link>https://kuronetwork.me/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kuronetwork.github.io/about/</guid>
+      <guid>https://kuronetwork.me/about/</guid>
       <description>Kuro is principally engaged in the consulting experience of the Cybersecurity, network infrastructure security, mobile application security and technical assessment testing / auditing (ISO 27001,SWIFT CSCF, Cybersecurity regulatory compliance), especially in Financial security sector. Through years of experience and research,He is committed to assisting clients in solving information security, either management policy or technical issues with his diverse backgrounds and expertise. Currently working towards on Cyber security education.
 My Medium blog - https://medium.</description>
     </item>
     
     <item>
       <title>Contact</title>
-      <link>https://kuronetwork.github.io/contact/</link>
+      <link>https://kuronetwork.me/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kuronetwork.github.io/contact/</guid>
+      <guid>https://kuronetwork.me/contact/</guid>
       <description>  My Facebook - https://www.facebook.com/kublackstock/   My Linkedin - https://www.linkedin.com/in/kurohuang/   My Medium Blog - https://medium.com/blacksecurity   </description>
     </item>
     
     <item>
       <title>First snippet</title>
-      <link>https://kuronetwork.github.io/snippets/first/</link>
+      <link>https://kuronetwork.me/snippets/first/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kuronetwork.github.io/snippets/first/</guid>
+      <guid>https://kuronetwork.me/snippets/first/</guid>
       <description>This content is in snippets/first/index.md
 pwd </description>
     </item>
     
     <item>
       <title>Second snippet</title>
-      <link>https://kuronetwork.github.io/snippets/second/</link>
+      <link>https://kuronetwork.me/snippets/second/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kuronetwork.github.io/snippets/second/</guid>
+      <guid>https://kuronetwork.me/snippets/second/</guid>
       <description>This content is in snippets/second/index.md
 ls -la </description>
     </item>

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Content of tables on Kuro - 資安工作者的學習手記</title>
-    <link>https://kuronetwork.github.io/categories/content-of-tables/</link>
+    <link>https://kuronetwork.me/categories/content-of-tables/</link>
     <description>Recent content in Content of tables on Kuro - 資安工作者的學習手記</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <lastBuildDate>Wed, 20 May 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://kuronetwork.github.io/categories/content-of-tables/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kuronetwork.me/categories/content-of-tables/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Medium 文章一覽(置頂)</title>
-      <link>https://kuronetwork.github.io/posts/all_post/</link>
+      <link>https://kuronetwork.me/posts/all_post/</link>
       <pubDate>Wed, 20 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://kuronetwork.github.io/posts/all_post/</guid>
+      <guid>https://kuronetwork.me/posts/all_post/</guid>
       <description>所有文章目錄 Medium文章部落格: https://medium.com/blacksecurity
 CTF / 滲透測試   Root me-FTP authentication Write-up
   Hack The Box-Bastion Write
@@ -32,10 +32,10 @@ CTF / 滲透測試   Root me-FTP authentication Write-up
     
     <item>
       <title>Metasploitable - 學習筆記一覽</title>
-      <link>https://kuronetwork.github.io/posts/metasplitable/</link>
+      <link>https://kuronetwork.me/posts/metasplitable/</link>
       <pubDate>Tue, 19 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://kuronetwork.github.io/posts/metasplitable/</guid>
+      <guid>https://kuronetwork.me/posts/metasplitable/</guid>
       <description>Metasploitable - 學習筆記一覽 這邊針對我在Metasploitable 上學習的一些筆記做整理:   Metasploitable 學習筆記-Web滲透測試基礎與文件上傳漏洞教學 Metasploitable 學習筆記-DVWA Command injection 命令注入攻擊與 Reverse Shell  </description>
     </item>
     
