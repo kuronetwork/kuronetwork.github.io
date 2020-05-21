@@ -13,16 +13,6 @@
   </url>
   
   <url>
-    <loc>https://kuronetwork.me/series/content-of-tables/</loc>
-    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kuronetwork.me/categories/content-of-tables/</loc>
-    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://kuronetwork.me/</loc>
     <lastmod>2020-05-20T00:00:00+00:00</lastmod>
   </url>
@@ -44,6 +34,16 @@
   
   <url>
     <loc>https://kuronetwork.me/series/</loc>
+    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuronetwork.me/series/table-of-contents/</loc>
+    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuronetwork.me/categories/table-of-contents/</loc>
     <lastmod>2020-05-20T00:00:00+00:00</lastmod>
   </url>
   
