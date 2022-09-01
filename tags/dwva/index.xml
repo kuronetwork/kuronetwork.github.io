@@ -6,11 +6,7 @@
     <description>Recent content in DWVA on Kuro - 資安工作者的學習手記</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Tue, 19 May 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://kuronetwork.me/tags/dwva/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 19 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kuronetwork.me/tags/dwva/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Metasploitable - 學習筆記一覽</title>
       <link>https://kuronetwork.me/posts/metasploitable/</link>
