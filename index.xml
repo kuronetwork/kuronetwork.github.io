@@ -6,11 +6,7 @@
     <description>Recent content on Kuro - 資安工作者的學習手記</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Wed, 20 May 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://kuronetwork.me/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 20 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kuronetwork.me/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Medium 文章一覽(置頂)</title>
       <link>https://kuronetwork.me/posts/all_post/</link>
@@ -45,7 +41,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kuronetwork.me/about/</guid>
-      <description>A Slashie ,Consultant ,and Medium Blogger. Kuro is principally engaged in the consulting experience of the Cybersecurity, network infrastructure security, OSINT, web security ,incident response, mobile application security, IEC 62443(OT) and technical assessment testing / auditing (ISMS, SWIFT, regulatory compliance), especially in financial security sector. Through years of experience and research,He is committed to assisting clients in solving information security, either management policy or technical issues with his diverse backgrounds and expertise.</description>
+      <description>A Slashie ,Consultant ,and Medium Blogger. Kuro is principally engaged in the consulting experience of the Cybersecurity, risk management, it security control, compliance review, network infrastructure security, vulnerability assessment, mobile application security, and security assessment testing / auditing (ISMS, regulatory compliance), especially in financial security sector. Through years of experience and research, He is committed to assisting clients in solving information security, either management policy or technical issues with his diverse backgrounds and expertise.</description>
     </item>
     
     <item>
