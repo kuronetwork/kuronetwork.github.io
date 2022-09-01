@@ -6,11 +6,11 @@
     <description>Recent content in all on Kuro - 資安工作者的學習手記</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Wed, 20 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://kuronetwork.me/tags/all/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://kuronetwork.me/tags/all/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Medium 文章一覽(置頂)</title>
       <link>https://kuronetwork.me/posts/all_post/</link>
-      <pubDate>Wed, 20 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 01 Sep 2022 00:00:00 +0000</pubDate>
       
       <guid>https://kuronetwork.me/posts/all_post/</guid>
       <description>所有文章目錄 Medium文章部落格: https://medium.com/blacksecurity
@@ -24,6 +24,22 @@
   EC-Council 系列證照自修申請考試(Self-Study) 步驟教學 (適用 CEH、CTIA、ECIH、CHFI、CND、CSA、EDPR等)
   ISACA CISA 國際電腦稽核師準備心得 (Certified Information Systems Auditor )
   資安稽核員的精神— 如何成為值得信賴的稽核員？</description>
+    </item>
+    
+    <item>
+      <title>證照心得文章</title>
+      <link>https://kuronetwork.me/posts/certification/</link>
+      <pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://kuronetwork.me/posts/certification/</guid>
+      <description>所有文章目錄 Medium文章部落格: https://medium.com/blacksecurity
+資安管理與治理證照   入門學習資安治理與管理： ISACA 證照學習組合包與教材總整理 (CISA/CISM/CRISC/CGEIT)
+  快速通過 CISSP 考試心得、準備方式與教材整理（Certified Information Systems Security Professional）
+  不敗學習力：10大聰明讀書法之 CISSP 證照考試應用心得
+  ISACA CISA 國際電腦稽核師準備心得 (Certified Information Systems Auditor )
+  ISACA CISM 國際資訊安全經理人準備心得 (Certified Information Security Manager )
+  ISACA CRISC 國際資訊風險控制師認證 (Certified in Risk and Information Systems Control ) 自修考試心得
+  ISACA CGEIT 國際企業資訊治理師認證 (Certified in the Governance of Enterprise IT) 自修考試心得</description>
     </item>
     
   </channel>
