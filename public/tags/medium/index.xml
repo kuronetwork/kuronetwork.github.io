@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Medium on Kuro - 資安工作者的學習手記</title>
+    <link>https://kuronetwork.me/tags/medium/</link>
+    <description>Recent content in Medium on Kuro - 資安工作者的學習手記</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Thu, 01 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://kuronetwork.me/tags/medium/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Medium 文章一覽(置頂)</title>
+      <link>https://kuronetwork.me/posts/all_post/</link>
+      <pubDate>Thu, 01 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://kuronetwork.me/posts/all_post/</guid>
+      <description>所有文章目錄 Medium文章部落格: https://medium.com/blacksecurity
+資訊安全   資訊安全-金融業資訊安全技術法規要求簡介
+  網路安全封包分析:Wireshark 快速判斷IP位置並找出可疑程式 — 使用GeoLite2
+  用Wireshark 解析使用者瀏覽器HTTPS流量教學
+  網路安全封包分析:封包Payload行為判讀與常見協定安全解析
+  CEH v10 考試心得與讀書資料分享
+  ECSA v10 考試心得與讀書資料分享/ ECSA v10 Review and Study Materials
+  ECSA v10 等效申請CREST CPSA 資安分析師證照教學 / ECSA with CPSA Equivalency Recognition Step
+  EC-Council 系列證照自修申請考試(Self-Study) 步驟教學 (適用 CEH、CTIA、ECIH、CHFI、CND、CSA、EDPR等)
+  ISACA CISA 國際電腦稽核師準備心得 (Certified Information Systems Auditor )
+  資安稽核員的精神— 如何成為值得信賴的稽核員？</description>
+    </item>
+    
+    <item>
+      <title>證照心得文章</title>
+      <link>https://kuronetwork.me/posts/certification/</link>
+      <pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://kuronetwork.me/posts/certification/</guid>
+      <description>所有文章目錄 Medium文章部落格: https://medium.com/blacksecurity
+資安管理與治理證照   入門學習資安治理與管理： ISACA 證照學習組合包與教材總整理 (CISA/CISM/CRISC/CGEIT/CDPSE)
+  快速通過 CISSP 考試心得、準備方式與教材整理（Certified Information Systems Security Professional）
+  不敗學習力：10大聰明讀書法之 CISSP 證照考試應用心得
+  CCSP 雲端資安專家自修考試心得、準備方式與教材整理（Certified Cloud Security Professional）
+  最佳新手資安管理證照，ISC2 CC 自修考試心得、準備方式與教材整理（Certified in Cybersecurity Certification）
+  ISACA CISA 國際電腦稽核師準備心得 (Certified Information Systems Auditor )
+  ISACA CISM 國際資訊安全經理人準備心得 (Certified Information Security Manager )
+  ISACA CRISC 國際資訊風險控制師認證 (Certified in Risk and Information Systems Control ) 自修考試心得</description>
+    </item>
+    
+  </channel>
+</rss>
