@@ -58,6 +58,8 @@ series = ["Table of contents"]
 
 - [最佳新手資安管理證照，ISC2 CC 自修考試心得、準備方式與教材整理（Certified in Cybersecurity Certification）](https://medium.com/blacksecurity/cc-cbcfc9b842b5)
 
+- [密碼管理器(Password Manager)平台轉移心得與密碼格式轉換工具介紹 — 使用mrc converter suite）](https://medium.com/blacksecurity/passwordmanager-21e115f2f59b)
+
 ### CTF / 滲透測試
 
 - [Root me-FTP authentication Write-up](https://medium.com/blacksecurity/root-me-ftp-authentication-write-up-5a44532bac47)
