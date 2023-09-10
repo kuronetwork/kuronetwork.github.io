@@ -1,4 +1,4 @@
-1.Gandi上設定四個A record (GitHub)
+1.Service Provider 上設定四個A record (GitHub)
 2.Github page上根目錄設一個CNAME檔案(kuronetwork.me)
 3.config.toml的Base URL 需要改成新Domain
 4.Publish上去後要注意GitHub上的Custmor Domain是否正常
