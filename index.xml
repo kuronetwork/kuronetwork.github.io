@@ -14,16 +14,17 @@
       
       <guid>https://kuronetwork.me/posts/all_post/</guid>
       <description>所有文章目錄 Medium文章部落格: https://medium.com/blacksecurity
-資訊安全   資訊安全-金融業資訊安全技術法規要求簡介
+資訊安全   資安思維、強韌身心：資安人的健康啟示 — 為什麼要運動？將資安觀念套用到你的日常生活，提升你的身體韌性！
+  使用AWS CloudFront 的原始存取控制(OAC)建立安全的 S3 靜態網站
+  釣魚測試(Phishing Tests) VS. 消防演練(Fire Drills)有趣的觀點微分析
+  Building Secure NL to SQL Solutions: Information Security Considerations
+  資訊安全-金融業資訊安全技術法規要求簡介
   網路安全封包分析:Wireshark 快速判斷IP位置並找出可疑程式 — 使用GeoLite2
   用Wireshark 解析使用者瀏覽器HTTPS流量教學
   網路安全封包分析:封包Payload行為判讀與常見協定安全解析
   CEH v10 考試心得與讀書資料分享
   ECSA v10 考試心得與讀書資料分享/ ECSA v10 Review and Study Materials
-  ECSA v10 等效申請CREST CPSA 資安分析師證照教學 / ECSA with CPSA Equivalency Recognition Step
-  EC-Council 系列證照自修申請考試(Self-Study) 步驟教學 (適用 CEH、CTIA、ECIH、CHFI、CND、CSA、EDPR等)
-  ISACA CISA 國際電腦稽核師準備心得 (Certified Information Systems Auditor )
-  資安稽核員的精神— 如何成為值得信賴的稽核員？</description>
+  ECSA v10 等效申請CREST CPSA 資安分析師證照教學 / ECSA with CPSA Equivalency Recognition Step</description>
     </item>
     
     <item>
@@ -58,7 +59,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kuronetwork.me/about/</guid>
-      <description>A Slashie ,Consultant, and Medium Blogger. Kuro is primarily engaged in consulting experiences related to cybersecurity, risk management, cloud security, compliance review, infrastructure security, vulnerability assessment, mobile application security and security assessment testing/auditing. He specializes in the financial and high-tech manufacturing security sectors. Through years of experience and research, he is committed to assisting clients in solving information security issues, whether they are related to management policies or technical challenges, leveraging his diverse background and expertise.</description>
+      <description>A Slashie ,Consultant, and Medium Blogger. Kuro is primarily engaged in consulting experiences related to cybersecurity, cloud security, risk management, compliance review, infrastructure security, vulnerability assessment, mobile application security and security assessment testing/auditing. He specializes in the financial and high-tech manufacturing security sectors. Through years of experience and research, he is committed to assisting clients in solving information security issues, whether they are related to management policies or technical challenges, leveraging his diverse background and expertise.</description>
     </item>
     
     <item>
