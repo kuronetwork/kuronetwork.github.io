@@ -14,7 +14,8 @@
       
       <guid>https://kuronetwork.me/posts/all_post/</guid>
       <description>所有文章目錄 Medium文章部落格: https://medium.com/blacksecurity
-資訊安全   雲端網路存取控制規則檢視-官方指令彙整(Azure NSG, AWS Security Group/NACL ,GCP Firewall)
+資訊安全   機密計算(Confidential Computing)在Azure, AWS, GCP上的使用與介紹
+  雲端網路存取控制規則檢視-官方指令彙整(Azure NSG, AWS Security Group/NACL ,GCP Firewall)
   資安思維、強韌身心：資安人的健康啟示 — 為什麼要運動？將資安觀念套用到你的日常生活，提升你的身體韌性！
   使用AWS CloudFront 的原始存取控制(OAC)建立安全的 S3 靜態網站
   釣魚測試(Phishing Tests) VS. 消防演練(Fire Drills)有趣的觀點微分析
@@ -22,8 +23,7 @@
   Amazon CodeGuru Security: Your Code Review SAST Tool (靜態應用程式安全測試)
   資訊安全-金融業資訊安全技術法規要求簡介
   網路安全封包分析:Wireshark 快速判斷IP位置並找出可疑程式 — 使用GeoLite2
-  用Wireshark 解析使用者瀏覽器HTTPS流量教學
-  網路安全封包分析:封包Payload行為判讀與常見協定安全解析</description>
+  用Wireshark 解析使用者瀏覽器HTTPS流量教學</description>
     </item>
     
   </channel>
