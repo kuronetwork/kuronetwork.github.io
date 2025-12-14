@@ -10,6 +10,19 @@ export default function ContactPage() {
 
         <div className="space-y-6">
           <a
+            href="mailto:contact@kuronetwork.me"
+            className="flex items-center gap-4 p-4 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-accent hover:shadow-lg transition-all"
+          >
+            <svg className="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            <div>
+              <p className="font-semibold text-gray-900 dark:text-white">Email</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">contact@kuronetwork.me</p>
+            </div>
+          </a>
+
+          <a
             href="https://twitter.com/catkuroH"
             target="_blank"
             rel="noopener noreferrer"
