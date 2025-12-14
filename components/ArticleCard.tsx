@@ -14,12 +14,9 @@ export default function ArticleCard({ article }: ArticleCardProps) {
     >
       <div className="flex items-start justify-between gap-4">
         <div className="flex-1">
-          <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-accent transition-colors mb-2">
+          <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-accent transition-colors">
             {article.title}
           </h3>
-          <p className="text-sm text-gray-500 dark:text-gray-400">
-            {article.date}
-          </p>
         </div>
         <svg
           className="w-5 h-5 text-gray-400 group-hover:text-accent transition-colors flex-shrink-0 mt-1"

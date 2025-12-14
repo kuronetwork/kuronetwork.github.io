@@ -13,11 +13,13 @@ function ArticlesContent() {
   const [selectedCategory, setSelectedCategory] = useState(categoryParam || '全部');
 
   const filteredArticles = useMemo(() => {
-    return articles.filter(article => {
-      const matchesSearch = article.title.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesCategory = selectedCategory === '全部' || article.category === selectedCategory;
-      return matchesSearch && matchesCategory;
-    });
+    return articles
+      .filter(article => {
+        const matchesSearch = article.title.toLowerCase().includes(searchTerm.toLowerCase());
+        const matchesCategory = selectedCategory === '全部' || article.category === selectedCategory;
+        return matchesSearch && matchesCategory;
+      })
+      .sort((a, b) => b.id - a.id); // 降序排列：ID 大的（新文章）在前
   }, [searchTerm, selectedCategory]);
 
   const groupedArticles = useMemo(() => {

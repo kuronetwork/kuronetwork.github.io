@@ -4,8 +4,9 @@ import CategoryCard from '@/components/CategoryCard';
 import ArticleCard from '@/components/ArticleCard';
 
 export default function Home() {
-  const featuredArticles = articles.filter(a => a.featured).slice(0, 6);
-  const latestArticles = articles.slice(0, 6);
+  const sortedArticles = [...articles].sort((a, b) => b.id - a.id); // 降序排列
+  const featuredArticles = sortedArticles.filter(a => a.featured).slice(0, 6);
+  const latestArticles = sortedArticles.slice(0, 6);
 
   return (
     <div className="container mx-auto px-4 py-12">
