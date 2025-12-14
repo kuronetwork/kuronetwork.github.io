@@ -43,3 +43,6 @@ TEST_REPORT.md
 
 # backup folders
 new-site/
+
+# scripts (internal tools)
+scripts/
