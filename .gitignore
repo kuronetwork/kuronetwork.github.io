@@ -1,25 +1,33 @@
-# Virtual Environment
-venv/
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
 
-# Folder view configuration files
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
 .DS_Store
-Desktop.ini
+*.pem
 
-# Thumbnail cache files
-._*
-Thumbs.db
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# Files that might appear on external disks
-.Spotlight-V100
-.Trashes
+# local env files
+.env*.local
 
-# Compiled Python files
-*.pyc
+# vercel
+.vercel
 
-# Compiled C++ files
-*.out
-
-# Application specific files
-venv
-node_modules
-.sass-cache
+# typescript
+*.tsbuildinfo
+next-env.d.ts
