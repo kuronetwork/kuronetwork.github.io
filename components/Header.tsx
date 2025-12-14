@@ -29,7 +29,7 @@ export default function Header() {
                 onBlur={() => setTimeout(() => setIsProjectsOpen(false), 200)}
                 className="hover:text-accent transition-colors flex items-center gap-1"
               >
-                公開專案
+                我的作品
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
@@ -84,7 +84,7 @@ export default function Header() {
             
             {/* Mobile Projects */}
             <div className="border-t border-gray-200 dark:border-gray-700 pt-4 mt-4">
-              <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">公開專案</p>
+              <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">我的作品</p>
               <a
                 href="https://kurostudio-app.github.io/Explore-Diving-Website/index.html"
                 target="_blank"
