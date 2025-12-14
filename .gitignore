@@ -31,3 +31,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# internal documentation (keep local only)
+DEPLOYMENT*.md
+FINAL_CHECKLIST.md
+MIGRATION_GUIDE.md
+QUICK_START.md
+START_HERE.md
+SUMMARY.md
+TEST_REPORT.md
+
+# backup folders
+new-site/
