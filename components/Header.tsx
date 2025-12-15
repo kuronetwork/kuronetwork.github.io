@@ -38,7 +38,7 @@ export default function Header() {
               {isProjectsOpen && (
                 <div className="absolute top-full right-0 mt-2 w-56 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 py-2">
                   <a
-                    href="https://kurostudio-app.github.io/Explore-Diving-Website/index.html"
+                    href="https://explorediving.org/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
@@ -86,7 +86,7 @@ export default function Header() {
             <div className="border-t border-gray-200 dark:border-gray-700 pt-4 mt-4">
               <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">我的作品</p>
               <a
-                href="https://kurostudio-app.github.io/Explore-Diving-Website/index.html"
+                href="https://explorediving.org/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block pl-4 py-2 hover:text-accent transition-colors"
