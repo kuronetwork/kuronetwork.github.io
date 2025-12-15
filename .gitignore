@@ -2,6 +2,7 @@
 /node_modules
 /.pnp
 .pnp.js
+/package-lock.json
 
 # testing
 /coverage
@@ -16,14 +17,22 @@
 # misc
 .DS_Store
 *.pem
+*.key
+*.p12
+*.pfx
 
 # debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+*.log
 
 # local env files
+.env
 .env*.local
+.env.development
+.env.production
+.env.test
 
 # vercel
 .vercel
@@ -32,8 +41,29 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
 # internal documentation and tools (keep local only)
 docs/
 
 # backup folders
 new-site/
+hugo-old/
+
+# sensitive files (just in case)
+*secret*
+*password*
+*credential*
+*.backup
+*.bak
+*.tmp
