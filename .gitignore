@@ -43,6 +43,8 @@ next-env.d.ts
 
 # IDE
 .vscode/
+.kiro/
+./cursor
 .idea/
 *.swp
 *.swo
