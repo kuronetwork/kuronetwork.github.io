@@ -36,8 +36,9 @@ export const articles: Article[] = [
   { id: 38, title: "網路安全封包分析:Wireshark 快速判斷IP位置並找出可疑程式", date: "2022-06-01", category: "資訊安全", tags: ["Wireshark", "封包分析"], url: "https://medium.com/blacksecurity/securityanalysiswithwireshark1-51b4a54ba483" },
   { id: 37, title: "資訊安全-金融業資訊安全技術法規要求簡介", date: "2022-05-25", category: "資訊安全", tags: ["法規", "金融"], url: "https://medium.com/blacksecurity/資訊安全-金融業資訊安全技術法規要求簡介-d3bb8d66a308" },
 
-// 雲端運算
-  { id: 62, title: "使用AWS CloudFront 的原始存取控制(OAC)建立安全的 S3 靜態網站", date: "2023-10-09", category: "雲端運算", tags: ["CEH", "證照"], url: "https://medium.com/blacksecurity/aws-cloudfront-oac-5805d27b3a7a" },
+  // 雲端運算
+  { id: 62, title: "使用AWS CloudFront 的原始存取控制(OAC)建立安全的 S3 靜態網站", date: "2023-10-09", category: "雲端運算", tags: ["AWS", "CloudFront"], url: "https://medium.com/blacksecurity/aws-cloudfront-oac-5805d27b3a7a" },
+  { id: 24, title: "AZ-900 Microsoft Azure Fundamentals 自修考試心得與準備資料", date: "2022-03-20", category: "雲端運算", tags: ["Azure", "證照"], url: "https://medium.com/@kuroH/az-900-microsoft-azure-fundamentals-d0718175de65" },
 
   // CTF / 滲透測試
   { id: 36, title: "Root me — Zone Transfer Write-up", date: "2022-05-20", category: "CTF/滲透測試", tags: ["Root me", "DNS"], url: "https://medium.com/blacksecurity/root-me-dns-zone-transfer-write-up-596dc252c98b" },
@@ -54,7 +55,6 @@ export const articles: Article[] = [
   { id: 25, title: "Root me-FTP authentication Write-up", date: "2022-03-25", category: "CTF/滲透測試", tags: ["Root me", "FTP"], url: "https://medium.com/blacksecurity/root-me-ftp-authentication-write-up-5a44532bac47" },
 
   // 網路管理
-  { id: 24, title: "AZ-900 Microsoft Azure Fundamentals 自修考試心得與準備資料", date: "2022-03-20", category: "雲端運算", tags: ["Azure", "證照"], url: "https://medium.com/@kuroH/az-900-microsoft-azure-fundamentals-d0718175de65" },
   { id: 23, title: "VMware VCP-NV網路虛擬化 — 自修考試準備心得與抵免上課教學", date: "2022-03-15", category: "網路管理", tags: ["VMware", "證照"], url: "https://medium.com/blacksecurity/vmware-network-virtualization-e52b09b526c8" },
   { id: 22, title: "Cisco CCNP Enterprise 2020新版自修考試準備心得與流程介紹", date: "2022-03-10", category: "網路管理", tags: ["Cisco", "CCNP"], url: "https://medium.com/blacksecurity/cisco-ccnp-enterprise-2020-9866cbf2d050" },
   { id: 21, title: "[Cisco] 網路流量側錄功能教學-SPAN", date: "2022-03-05", category: "網路管理", tags: ["Cisco", "SPAN"], url: "https://medium.com/blacksecurity/cisco-流量側錄功能-span-mirror-port-17f380e404ac" },
@@ -84,11 +84,18 @@ export const articles: Article[] = [
   { id: 1, title: "金融股票九大指標一次搞懂-殖利率/EPS/ROA與ROE/本益比PER/PBR 股價淨值比", date: "2019-11-25", category: "理財投資", tags: ["股票", "指標"], url: "https://medium.com/blacksecurity/金融九大指標解釋-殖利率-eps-roa與roe-本益比per-pbr-股價淨值比-6d97a9fab7ba" },
 ];
 
-export const categories = [
-  { name: "資訊安全", icon: "🔒", count: 23, description: "證照考試、資安治理、技術分析" },
-  { name: "CTF/資安技術", icon: "💻", count: 12, description: "CTF Write-ups、滲透測試實戰" },
-  { name: "網路管理", icon: "🌐", count: 7, description: "Cisco、VMware、Azure 網路技術" },
-  { name: "讀書與人生故事", icon: "📖", count: 9, description: "個人成長、思考方法、年度回顧" },
-  { name: "理財投資", icon: "💰", count: 8, description: "股票投資、存股策略、技術分析" },
-  { name: "雲端運算", icon: "💰", count: 8, description: "Cloud、雲端技術、雲端安全" }, //icon
+// 分類基本資料（count 會自動計算）
+const categoryDefinitions = [
+  { name: "資訊安全", icon: "🔒", description: "證照考試、資安治理、技術分析" },
+  { name: "CTF/滲透測試", icon: "💻", description: "CTF Write-ups、滲透測試實戰" },
+  { name: "網路管理", icon: "🌐", description: "Cisco、VMware、Azure 網路技術" },
+  { name: "讀書心得", icon: "📖", description: "個人成長、思考方法、年度回顧" },
+  { name: "理財投資", icon: "💰", description: "股票投資、存股策略、技術分析" },
+  { name: "雲端運算", icon: "☁️", description: "Cloud、雲端技術、雲端安全" },
 ];
+
+// 自動計算每個分類的文章數量
+export const categories = categoryDefinitions.map(cat => ({
+  ...cat,
+  count: articles.filter(a => a.category === cat.name).length,
+}));
