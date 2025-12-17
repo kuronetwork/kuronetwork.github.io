@@ -10,6 +10,8 @@ export interface Article {
 
 export const articles: Article[] = [
   // 資訊安全
+  { id: 61, title: "資安思維、強韌身心：資安人的健康啟示 — 為什麼要運動？將資安觀念套用到你的日常生活，提升你的身體韌性！", date: "2023-08-30", category: "資訊安全", tags: ["CEH", "證照"], url: "https://medium.com/blacksecurity/workout-d40a34b19194" },
+  { id: 60, title: "EC-Council CEH Practical / Master 準備心得 — 讓理論與實作相輔相成的學習", date: "2023-08-11", category: "資訊安全", tags: ["CEH", "證照"], url: "https://medium.com/blacksecurity/ceh-practical-master-3e80cac180a2" },
   { id: 59, title: "密碼管理器(Password Manager)平台轉移心得與密碼格式轉換工具介紹", date: "2022-09-15", category: "資訊安全", tags: ["密碼管理", "工具"], url: "https://medium.com/blacksecurity/passwordmanager-21e115f2f59b", featured: true },
   { id: 58, title: "快速通過 CISSP 考試心得、準備方式與教材整理", date: "2022-09-01", category: "資訊安全", tags: ["CISSP", "證照"], url: "https://medium.com/blacksecurity/cissp-8ff31adf79e0", featured: true },
   { id: 57, title: "最佳新手資安管理證照，ISC2 CC 自修考試心得、準備方式與教材整理", date: "2022-08-31", category: "資訊安全", tags: ["CC", "證照"], url: "https://medium.com/blacksecurity/cc-cbcfc9b842b5" },
@@ -34,6 +36,9 @@ export const articles: Article[] = [
   { id: 38, title: "網路安全封包分析:Wireshark 快速判斷IP位置並找出可疑程式", date: "2022-06-01", category: "資訊安全", tags: ["Wireshark", "封包分析"], url: "https://medium.com/blacksecurity/securityanalysiswithwireshark1-51b4a54ba483" },
   { id: 37, title: "資訊安全-金融業資訊安全技術法規要求簡介", date: "2022-05-25", category: "資訊安全", tags: ["法規", "金融"], url: "https://medium.com/blacksecurity/資訊安全-金融業資訊安全技術法規要求簡介-d3bb8d66a308" },
 
+// 雲端運算
+  { id: 62, title: "使用AWS CloudFront 的原始存取控制(OAC)建立安全的 S3 靜態網站", date: "2023-10-09", category: "雲端運算", tags: ["CEH", "證照"], url: "https://medium.com/blacksecurity/aws-cloudfront-oac-5805d27b3a7a" },
+
   // CTF / 滲透測試
   { id: 36, title: "Root me — Zone Transfer Write-up", date: "2022-05-20", category: "CTF/滲透測試", tags: ["Root me", "DNS"], url: "https://medium.com/blacksecurity/root-me-dns-zone-transfer-write-up-596dc252c98b" },
   { id: 35, title: "Root me — IP Time to Live(TTL) Write-up", date: "2022-05-15", category: "CTF/滲透測試", tags: ["Root me", "網路"], url: "https://medium.com/blacksecurity/root-me-ip-time-to-live-write-up-492ca954ea6b" },
@@ -49,7 +54,7 @@ export const articles: Article[] = [
   { id: 25, title: "Root me-FTP authentication Write-up", date: "2022-03-25", category: "CTF/滲透測試", tags: ["Root me", "FTP"], url: "https://medium.com/blacksecurity/root-me-ftp-authentication-write-up-5a44532bac47" },
 
   // 網路管理
-  { id: 24, title: "AZ-900 Microsoft Azure Fundamentals 自修考試心得與準備資料", date: "2022-03-20", category: "網路管理", tags: ["Azure", "證照"], url: "https://medium.com/@kuroH/az-900-microsoft-azure-fundamentals-d0718175de65" },
+  { id: 24, title: "AZ-900 Microsoft Azure Fundamentals 自修考試心得與準備資料", date: "2022-03-20", category: "雲端運算", tags: ["Azure", "證照"], url: "https://medium.com/@kuroH/az-900-microsoft-azure-fundamentals-d0718175de65" },
   { id: 23, title: "VMware VCP-NV網路虛擬化 — 自修考試準備心得與抵免上課教學", date: "2022-03-15", category: "網路管理", tags: ["VMware", "證照"], url: "https://medium.com/blacksecurity/vmware-network-virtualization-e52b09b526c8" },
   { id: 22, title: "Cisco CCNP Enterprise 2020新版自修考試準備心得與流程介紹", date: "2022-03-10", category: "網路管理", tags: ["Cisco", "CCNP"], url: "https://medium.com/blacksecurity/cisco-ccnp-enterprise-2020-9866cbf2d050" },
   { id: 21, title: "[Cisco] 網路流量側錄功能教學-SPAN", date: "2022-03-05", category: "網路管理", tags: ["Cisco", "SPAN"], url: "https://medium.com/blacksecurity/cisco-流量側錄功能-span-mirror-port-17f380e404ac" },
@@ -81,8 +86,9 @@ export const articles: Article[] = [
 
 export const categories = [
   { name: "資訊安全", icon: "🔒", count: 23, description: "證照考試、資安治理、技術分析" },
-  { name: "CTF/滲透測試", icon: "💻", count: 12, description: "CTF Write-ups、滲透測試實戰" },
+  { name: "CTF/資安技術", icon: "💻", count: 12, description: "CTF Write-ups、滲透測試實戰" },
   { name: "網路管理", icon: "🌐", count: 7, description: "Cisco、VMware、Azure 網路技術" },
-  { name: "讀書心得", icon: "📖", count: 9, description: "個人成長、思考方法、年度回顧" },
+  { name: "讀書與人生故事", icon: "📖", count: 9, description: "個人成長、思考方法、年度回顧" },
   { name: "理財投資", icon: "💰", count: 8, description: "股票投資、存股策略、技術分析" },
+  { name: "雲端運算", icon: "💰", count: 8, description: "Cloud、雲端技術、雲端安全" }, //icon
 ];
