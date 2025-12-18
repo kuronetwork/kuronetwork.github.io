@@ -1,18 +1,17 @@
-# Kuro Network
+# Kuro 
 
-Personal website showcasing cybersecurity articles and professional information.
-
-## About
-
-This is a static website built with Next.js, featuring an index of cybersecurity articles published on Medium.
+Personal website with a Cyberpunk-themed design, showcasing cybersecurity articles and professional portfolio.
 
 ## Tech Stack
 
-- Next.js 15
-- React 18
-- TypeScript
+- Next.js 15 + React 18 + TypeScript
 - Tailwind CSS
+- Cyberpunk UI with neon effects & particle animations
 
 ## Visit
 
-[kuronetwork.me](https://kuronetwork.me)
+🌐 [kuronetwork.me](https://kuronetwork.me)
+
+## Author
+
+Kuro
