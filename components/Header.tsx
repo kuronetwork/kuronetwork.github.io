@@ -64,36 +64,44 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu Overlay */}
         {isMenuOpen && (
-          <div className="md:hidden absolute left-0 right-0 top-full bg-primary/95 backdrop-blur-xl border-b border-accent/20 px-4 pb-4 space-y-4 pt-4 z-[100]">
-            <MobileNavLink href="/" onClick={() => setIsMenuOpen(false)}>首頁</MobileNavLink>
-            <MobileNavLink href="/articles" onClick={() => setIsMenuOpen(false)}>文章索引</MobileNavLink>
-            <MobileNavLink href="/about" onClick={() => setIsMenuOpen(false)}>關於我</MobileNavLink>
-            <MobileNavLink href="/contact" onClick={() => setIsMenuOpen(false)}>聯絡</MobileNavLink>
-            
-            <div className="border-t border-accent/20 pt-4 mt-4">
-              <p className="text-sm text-accent/60 mb-2">我的作品</p>
-              <a
-                href="https://explorediving.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block pl-4 py-2 text-cyber-light/80 hover:text-accent transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                🤿 探索潛水APP
-              </a>
-              <a
-                href="https://aleriskcalc.kuronetwork.me/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block pl-4 py-2 text-cyber-light/80 hover:text-accent transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                📊 ALE Risk Calc
-              </a>
+          <>
+            {/* Backdrop */}
+            <div 
+              className="md:hidden fixed inset-0 top-[65px] bg-primary/80 backdrop-blur-sm z-[90]"
+              onClick={() => setIsMenuOpen(false)}
+            />
+            {/* Menu Content */}
+            <div className="md:hidden absolute left-0 right-0 top-full bg-primary border-b border-accent/20 px-4 pb-4 space-y-4 pt-4 z-[100] shadow-lg shadow-black/50">
+              <MobileNavLink href="/" onClick={() => setIsMenuOpen(false)}>首頁</MobileNavLink>
+              <MobileNavLink href="/articles" onClick={() => setIsMenuOpen(false)}>文章索引</MobileNavLink>
+              <MobileNavLink href="/about" onClick={() => setIsMenuOpen(false)}>關於我</MobileNavLink>
+              <MobileNavLink href="/contact" onClick={() => setIsMenuOpen(false)}>聯絡</MobileNavLink>
+              
+              <div className="border-t border-accent/20 pt-4 mt-4">
+                <p className="text-sm text-accent/60 mb-2">我的作品</p>
+                <a
+                  href="https://explorediving.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block pl-4 py-2 text-cyber-light/80 hover:text-accent transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  🤿 探索潛水APP
+                </a>
+                <a
+                  href="https://aleriskcalc.kuronetwork.me/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block pl-4 py-2 text-cyber-light/80 hover:text-accent transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  📊 ALE Risk Calc
+                </a>
+              </div>
             </div>
-          </div>
+          </>
         )}
       </nav>
     </header>
