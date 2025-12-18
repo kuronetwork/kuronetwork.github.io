@@ -34,7 +34,6 @@ export default function Home() {
 
       {/* Projects Section */}
       <section className="mb-16 scroll-fade-in delay-100">
-        <FrameLabel number="01" />
         <SectionTitle title="我的作品" />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           <ProjectCard
@@ -56,7 +55,6 @@ export default function Home() {
 
       {/* Categories Section */}
       <section className="mb-16 scroll-fade-in delay-200">
-        <FrameLabel number="02" />
         <SectionTitle title="文章分類" />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((category) => (
@@ -67,7 +65,6 @@ export default function Home() {
 
       {/* Latest Articles Section */}
       <section className="scroll-fade-in delay-300">
-        <FrameLabel number="03" />
         <div className="flex items-center justify-between mb-8">
           <h2 className="text-3xl font-bold">
             <span className="text-cyber-light/40 font-tech">: ⠻ </span>
@@ -88,16 +85,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-    </div>
-  );
-}
-
-function FrameLabel({ number }: { number: string }) {
-  return (
-    <div className="mb-2">
-      <span className="text-xs font-tech text-cyber-light/30 tracking-wider">
-        Frame_{number}
-      </span>
     </div>
   );
 }
