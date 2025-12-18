@@ -21,7 +21,8 @@ export default function Home() {
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-cyber-light mb-4">
             <span className="font-cyber cyber-logo glitch-hover">KURO</span>
-            <span className="text-cyber-light/80 typing-cursor"> - 資安工作者的學習手記</span>
+            <span className="text-cyber-light/40 font-tech"> // </span>
+            <span className="text-cyber-light/80 typing-cursor">資安工作者的學習手記</span>
           </h1>
           <p className="text-xl text-cyber-light/60 mb-6">
             Cyber Security Consultant | Medium Blogger | Scuba Diver | APP Developer
@@ -33,7 +34,8 @@ export default function Home() {
 
       {/* Projects Section */}
       <section className="mb-16 scroll-fade-in delay-100">
-        <SectionTitle emoji="🚀" title="我的作品" />
+        <FrameLabel number="01" />
+        <SectionTitle title="我的作品" />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           <ProjectCard
             href="https://explorediving.org/"
@@ -54,7 +56,8 @@ export default function Home() {
 
       {/* Categories Section */}
       <section className="mb-16 scroll-fade-in delay-200">
-        <SectionTitle emoji="📚" title="文章分類" />
+        <FrameLabel number="02" />
+        <SectionTitle title="文章分類" />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((category) => (
             <CategoryCard key={category.name} {...category} />
@@ -64,9 +67,12 @@ export default function Home() {
 
       {/* Latest Articles Section */}
       <section className="scroll-fade-in delay-300">
+        <FrameLabel number="03" />
         <div className="flex items-center justify-between mb-8">
-          <h2 className="text-3xl font-bold gradient-text">
-            📌 最新文章
+          <h2 className="text-3xl font-bold">
+            <span className="text-cyber-light/40 font-tech">: ⠻ </span>
+            <span className="gradient-text">最新文章</span>
+            <span className="text-cyber-light/40 font-tech"> ⠷ :</span>
           </h2>
           <Link
             href="/articles"
@@ -86,12 +92,23 @@ export default function Home() {
   );
 }
 
-function SectionTitle({ emoji, title }: { emoji: string; title: string }) {
+function FrameLabel({ number }: { number: string }) {
+  return (
+    <div className="mb-2">
+      <span className="text-xs font-tech text-cyber-light/30 tracking-wider">
+        Frame_{number}
+      </span>
+    </div>
+  );
+}
+
+function SectionTitle({ title }: { title: string }) {
   return (
     <div className="mb-8 text-center">
       <h2 className="text-3xl font-bold inline-block">
-        <span className="mr-2">{emoji}</span>
+        <span className="text-cyber-light/40 font-tech">: ⠻ </span>
         <span className="gradient-text">{title}</span>
+        <span className="text-cyber-light/40 font-tech"> ⠷ :</span>
       </h2>
       <div className="cyber-divider mt-4 max-w-md mx-auto">
         <span className="text-xs font-tech tracking-widest">◆</span>
@@ -112,7 +129,7 @@ function ProjectCard({ href, emoji, title, description, cta }: {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group border-flow click-glow corner-decoration rounded-xl p-6 hover:scale-[1.02] transition-transform duration-300"
+      className="group border-flow click-glow rounded-xl p-6 min-h-[160px] hover:scale-[1.02] transition-transform duration-300"
     >
       <div className="flex items-start gap-4">
         <div className="text-5xl">{emoji}</div>
@@ -121,7 +138,7 @@ function ProjectCard({ href, emoji, title, description, cta }: {
             {title}
           </h3>
           <p className="text-cyber-light/60 text-sm mb-3">{description}</p>
-          <div className="flex items-center text-accent text-sm font-semibold electric-button px-3 py-1 rounded w-fit">
+          <div className="flex items-center text-white/80 text-sm font-semibold electric-button px-3 py-1 rounded w-fit group-hover:text-accent group-hover:drop-shadow-[0_0_8px_rgba(0,255,255,0.6)] transition-all duration-300">
             <span>{cta}</span>
             <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
