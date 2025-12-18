@@ -396,10 +396,15 @@ body {
 
   /* Typing cursor */
   .typing-cursor::after {
-    content: '|';
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 1em;
+    background-color: #00ffff;
     animation: blink 1s step-end infinite;
-    color: #00ffff;
-    margin-left: 2px;
+    margin-left: 4px;
+    vertical-align: middle;
+    box-shadow: 0 0 4px rgba(0,255,255,0.8);
   }
 
   /* Scroll animation */
