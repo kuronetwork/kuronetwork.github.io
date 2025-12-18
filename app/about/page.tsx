@@ -2,7 +2,7 @@ export default function AboutPage() {
   return (
     <div className="container mx-auto px-4 py-12 max-w-5xl">
       <h1 className="text-4xl font-bold text-cyber-light mb-8 text-center scroll-fade-in">
-        About <span className="gradient-text">Kuro</span>
+        About <span className="font-cyber cyber-logo">KURO</span>
       </h1>
 
       <div className="max-w-none">
