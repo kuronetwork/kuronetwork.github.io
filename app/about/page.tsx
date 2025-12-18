@@ -1,8 +1,8 @@
 export default function AboutPage() {
   return (
     <div className="container mx-auto px-4 py-12 max-w-5xl">
-      <h1 className="text-4xl font-bold text-cyber-light mb-8 text-center">
-        About <span className="neon-text">Kuro</span>
+      <h1 className="text-4xl font-bold text-cyber-light mb-8 text-center scroll-fade-in">
+        About <span className="gradient-text">Kuro</span>
       </h1>
 
       <div className="max-w-none">
@@ -141,8 +141,9 @@ export default function AboutPage() {
 
 function SectionTitle({ emoji, title }: { emoji: string; title: string }) {
   return (
-    <h2 className="text-3xl font-bold mt-12 mb-6 text-cyber-light border-b border-accent/30 pb-2">
-      {emoji} {title}
+    <h2 className="text-3xl font-bold mt-12 mb-6 border-b border-accent/30 pb-2 scroll-fade-in">
+      <span className="mr-2">{emoji}</span>
+      <span className="gradient-text">{title}</span>
     </h2>
   );
 }

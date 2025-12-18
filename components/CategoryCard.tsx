@@ -22,14 +22,14 @@ export default function CategoryCard({ name, icon, count, description }: Categor
   return (
     <Link
       href={`/articles?category=${encodeURIComponent(name)}`}
-      className={`block p-6 rounded-lg bg-gradient-to-br ${colorClass} border backdrop-blur-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-lg group`}
+      className={`block p-6 rounded-lg border-flow bg-gradient-to-br ${colorClass} backdrop-blur-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-lg group`}
     >
       <div className="text-4xl mb-3">{icon}</div>
       <h3 className="text-xl font-bold text-cyber-light mb-2 group-hover:text-accent transition-colors">
         {name}
       </h3>
       <p className="text-sm text-cyber-light/60 mb-3">{description}</p>
-      <p className="text-sm font-semibold text-accent">{count} 篇文章</p>
+      <p className="text-sm font-semibold text-accent electric-button px-2 py-1 rounded w-fit">{count} 篇文章</p>
     </Link>
   );
 }
