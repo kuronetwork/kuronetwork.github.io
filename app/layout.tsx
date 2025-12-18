@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import StarField from "@/components/StarField";
+import ParticleBackground from "@/components/ParticleBackground";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,8 +22,10 @@ export default function RootLayout({
   return (
     <html lang="zh-TW">
       <body className={inter.className}>
+        <StarField />
+        <ParticleBackground />
         <Header />
-        <main className="min-h-screen">
+        <main className="min-h-screen relative z-10">
           {children}
         </main>
         <Footer />
