@@ -12,7 +12,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="text-center mb-16 scroll-fade-in">
         <div className="mb-6">
-          <div className="relative inline-block hologram-avatar rounded-full">
+          <div className="relative inline-block hologram-avatar glitch-entrance rounded-full">
             <img 
               src="/images/avatar.jpg" 
               alt="Kuro" 
@@ -107,7 +107,7 @@ function ProjectCard({ href, emoji, title, description, cta }: {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group border-flow rounded-xl p-6 hover:scale-[1.02] transition-transform duration-300"
+      className="group border-flow click-glow rounded-xl p-6 hover:scale-[1.02] transition-transform duration-300"
     >
       <div className="flex items-start gap-4">
         <div className="text-5xl">{emoji}</div>

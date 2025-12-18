@@ -25,6 +25,61 @@ body {
   min-height: 100vh;
 }
 
+/* Star field container */
+.star-field {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* Individual stars with different sizes and animations */
+.star-field::before,
+.star-field::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.star-field::before {
+  background-image: 
+    radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.8) 0%, transparent 100%),
+    radial-gradient(1px 1px at 25% 35%, rgba(0,255,255,0.6) 0%, transparent 100%),
+    radial-gradient(2px 2px at 40% 15%, rgba(255,255,255,0.9) 0%, transparent 100%),
+    radial-gradient(1px 1px at 55% 45%, rgba(255,0,128,0.5) 0%, transparent 100%),
+    radial-gradient(1px 1px at 70% 25%, rgba(255,255,255,0.7) 0%, transparent 100%),
+    radial-gradient(2px 2px at 85% 55%, rgba(0,255,255,0.8) 0%, transparent 100%),
+    radial-gradient(1px 1px at 15% 65%, rgba(255,255,255,0.6) 0%, transparent 100%),
+    radial-gradient(1px 1px at 30% 80%, rgba(128,0,255,0.5) 0%, transparent 100%),
+    radial-gradient(2px 2px at 50% 70%, rgba(255,255,255,0.8) 0%, transparent 100%),
+    radial-gradient(1px 1px at 65% 90%, rgba(0,255,255,0.6) 0%, transparent 100%),
+    radial-gradient(1px 1px at 80% 75%, rgba(255,255,255,0.7) 0%, transparent 100%),
+    radial-gradient(1px 1px at 95% 40%, rgba(255,0,128,0.4) 0%, transparent 100%);
+  animation: twinkle 4s ease-in-out infinite;
+}
+
+.star-field::after {
+  background-image: 
+    radial-gradient(1px 1px at 5% 50%, rgba(255,255,255,0.7) 0%, transparent 100%),
+    radial-gradient(2px 2px at 20% 10%, rgba(0,255,255,0.5) 0%, transparent 100%),
+    radial-gradient(1px 1px at 35% 60%, rgba(255,255,255,0.8) 0%, transparent 100%),
+    radial-gradient(1px 1px at 45% 30%, rgba(128,0,255,0.4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 60% 85%, rgba(255,255,255,0.6) 0%, transparent 100%),
+    radial-gradient(2px 2px at 75% 5%, rgba(255,0,128,0.5) 0%, transparent 100%),
+    radial-gradient(1px 1px at 90% 65%, rgba(0,255,255,0.7) 0%, transparent 100%),
+    radial-gradient(1px 1px at 12% 95%, rgba(255,255,255,0.5) 0%, transparent 100%),
+    radial-gradient(1px 1px at 28% 42%, rgba(255,255,255,0.9) 0%, transparent 100%),
+    radial-gradient(2px 2px at 62% 18%, rgba(0,255,255,0.6) 0%, transparent 100%),
+    radial-gradient(1px 1px at 78% 52%, rgba(128,0,255,0.5) 0%, transparent 100%),
+    radial-gradient(1px 1px at 88% 88%, rgba(255,255,255,0.7) 0%, transparent 100%);
+  animation: twinkle 4s ease-in-out infinite 2s;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -170,6 +225,125 @@ body {
   }
 }
 
+/* Star twinkle */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+/* Click/tap glow pulse */
+@keyframes clickGlow {
+  0% { 
+    box-shadow: 0 0 0 rgba(0,255,255,0);
+  }
+  50% { 
+    box-shadow: 0 0 20px rgba(0,255,255,0.6), 0 0 40px rgba(0,255,255,0.3), 0 0 60px rgba(128,0,255,0.2);
+  }
+  100% { 
+    box-shadow: 0 0 0 rgba(0,255,255,0);
+  }
+}
+
+/* Shooting star */
+@keyframes shootingStar {
+  0% {
+    transform: translateX(0) translateY(0);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(300px) translateY(300px);
+    opacity: 0;
+  }
+}
+
+/* Glitch entrance animation */
+@keyframes glitchEntrance {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+    filter: blur(10px);
+  }
+  10% {
+    opacity: 1;
+    transform: scale(1.02) translate(-3px, 3px);
+    filter: blur(0);
+  }
+  15% {
+    opacity: 0.8;
+    transform: scale(0.98) translate(3px, -3px);
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1) translate(-2px, 0);
+    clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+  }
+  25% {
+    opacity: 0.9;
+    transform: scale(1.01) translate(2px, 2px);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  30% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  35% {
+    opacity: 1;
+    transform: scale(1.03) translate(-1px, -1px);
+  }
+  40% {
+    opacity: 0.7;
+    transform: scale(0.99) translate(1px, 1px);
+    filter: hue-rotate(90deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+    filter: hue-rotate(0deg);
+  }
+  60% {
+    opacity: 0.9;
+    transform: translate(-2px, 0);
+  }
+  70% {
+    opacity: 1;
+    transform: translate(1px, 0);
+  }
+  80% {
+    opacity: 0.95;
+    transform: translate(0, -1px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translate(0, 0);
+    filter: blur(0);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+/* RGB split effect for glitch */
+@keyframes rgbSplit {
+  0%, 100% {
+    text-shadow: none;
+    filter: none;
+  }
+  25% {
+    text-shadow: -2px 0 #ff0080, 2px 0 #00ffff;
+    filter: none;
+  }
+  50% {
+    text-shadow: 2px 0 #ff0080, -2px 0 #00ffff;
+    filter: brightness(1.2);
+  }
+  75% {
+    text-shadow: -1px 0 #8000ff, 1px 0 #00ffff;
+    filter: none;
+  }
+}
+
 @layer components {
   /* Neon breathing effect for logo */
   .neon-breath {
@@ -291,5 +465,50 @@ body {
 
   .electric-button:hover {
     animation: electricPulse 1s ease-in-out infinite;
+  }
+
+  /* Click/tap glow effect for mobile */
+  .click-glow {
+    transition: all 0.3s ease;
+  }
+
+  .click-glow:active {
+    animation: clickGlow 0.6s ease-out;
+  }
+
+  /* Touch device optimizations */
+  @media (hover: none) {
+    .click-glow:active {
+      transform: scale(0.98);
+      animation: clickGlow 0.6s ease-out;
+    }
+    
+    .border-flow:active {
+      animation: clickGlow 0.6s ease-out;
+    }
+  }
+
+  /* Shooting star */
+  .shooting-star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: linear-gradient(45deg, #00ffff, transparent);
+    border-radius: 50%;
+    animation: shootingStar 3s ease-in-out infinite;
+  }
+
+  .shooting-star::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(0,255,255,0.8), transparent);
+    transform: translateX(-50px);
+  }
+
+  /* Glitch entrance effect for avatar */
+  .glitch-entrance {
+    animation: glitchEntrance 1.5s ease-out forwards;
   }
 }
