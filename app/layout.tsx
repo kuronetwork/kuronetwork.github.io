@@ -1,12 +1,28 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Orbitron, Rajdhani, Noto_Sans_TC } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StarField from "@/components/StarField";
 import ParticleBackground from "@/components/ParticleBackground";
 
-const inter = Inter({ subsets: ["latin"] });
+const orbitron = Orbitron({ 
+  subsets: ["latin"],
+  variable: '--font-orbitron',
+  weight: ['400', '700', '900'],
+});
+
+const rajdhani = Rajdhani({ 
+  subsets: ["latin"],
+  variable: '--font-rajdhani',
+  weight: ['400', '500', '600', '700'],
+});
+
+const notoSansTC = Noto_Sans_TC({ 
+  subsets: ["latin"],
+  variable: '--font-noto',
+  weight: ['400', '500', '700'],
+});
 
 export const metadata: Metadata = {
   title: "Kuro - 資安工作者的學習手記",
@@ -21,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh-TW">
-      <body className={inter.className}>
+      <body className={`${orbitron.variable} ${rajdhani.variable} ${notoSansTC.variable} font-sans`}>
         <StarField />
         <ParticleBackground />
         <Header />

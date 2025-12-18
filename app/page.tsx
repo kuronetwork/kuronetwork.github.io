@@ -20,7 +20,7 @@ export default function Home() {
             />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-cyber-light mb-4">
-            <span className="gradient-text glitch-hover">Kuro</span>
+            <span className="font-cyber cyber-logo glitch-hover">KURO</span>
             <span className="text-cyber-light/80 typing-cursor"> - 資安工作者的學習手記</span>
           </h1>
           <p className="text-xl text-cyber-light/60 mb-6">
@@ -88,10 +88,15 @@ export default function Home() {
 
 function SectionTitle({ emoji, title }: { emoji: string; title: string }) {
   return (
-    <h2 className="text-3xl font-bold mb-8 text-center">
-      <span className="mr-2">{emoji}</span>
-      <span className="gradient-text">{title}</span>
-    </h2>
+    <div className="mb-8 text-center">
+      <h2 className="text-3xl font-bold inline-block">
+        <span className="mr-2">{emoji}</span>
+        <span className="gradient-text">{title}</span>
+      </h2>
+      <div className="cyber-divider mt-4 max-w-md mx-auto">
+        <span className="text-xs font-tech tracking-widest">◆</span>
+      </div>
+    </div>
   );
 }
 
@@ -107,7 +112,7 @@ function ProjectCard({ href, emoji, title, description, cta }: {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group border-flow click-glow rounded-xl p-6 hover:scale-[1.02] transition-transform duration-300"
+      className="group border-flow click-glow corner-decoration rounded-xl p-6 hover:scale-[1.02] transition-transform duration-300"
     >
       <div className="flex items-start gap-4">
         <div className="text-5xl">{emoji}</div>
@@ -146,18 +151,13 @@ function SocialLinks() {
     { href: "https://east-passbook-703.notion.site/CISSP-0e54d473c4af46ec87cd84a38b553c71", title: "Notion", icon: "M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z" },
   ];
 
+  const allLinks = [...socialLinks, ...socialLinks2];
+  
   return (
-    <div className="flex flex-col items-center gap-3">
-      <div className="flex justify-center gap-4 flex-wrap">
-        {socialLinks.map((link) => (
-          <SocialIcon key={link.title} {...link} />
-        ))}
-      </div>
-      <div className="flex justify-center gap-4 flex-wrap">
-        {socialLinks2.map((link) => (
-          <SocialIcon key={link.title} {...link} />
-        ))}
-      </div>
+    <div className="flex justify-center gap-4 flex-wrap max-w-2xl mx-auto">
+      {allLinks.map((link) => (
+        <SocialIcon key={link.title} {...link} />
+      ))}
     </div>
   );
 }

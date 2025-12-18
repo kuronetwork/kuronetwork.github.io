@@ -9,6 +9,11 @@ const config: Config = {
   darkMode: 'class',
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-noto)', 'system-ui', 'sans-serif'],
+        cyber: ['var(--font-orbitron)', 'monospace'],
+        tech: ['var(--font-rajdhani)', 'sans-serif'],
+      },
       colors: {
         primary: '#0a0a0f',
         secondary: '#1a1a2e',

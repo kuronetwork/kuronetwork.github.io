@@ -13,7 +13,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <Link 
             href="/" 
-            className="text-2xl font-bold neon-text neon-breath glitch-hover tracking-wider"
+            className="text-2xl font-cyber font-bold cyber-logo glitch-hover"
           >
             KURO
           </Link>
