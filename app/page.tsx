@@ -10,19 +10,18 @@ export default function Home() {
   return (
     <div className="container mx-auto px-4 py-12">
       {/* Hero Section */}
-      <section className="text-center mb-16">
+      <section className="text-center mb-16 scroll-fade-in">
         <div className="mb-6">
-          <div className="relative inline-block">
+          <div className="relative inline-block hologram-avatar rounded-full">
             <img 
               src="/images/avatar.jpg" 
               alt="Kuro" 
-              className="w-32 h-32 mx-auto mb-6 rounded-full object-cover border-2 border-accent/50 shadow-neon"
+              className="w-32 h-32 mx-auto mb-6 rounded-full object-cover border-2 border-accent/50"
             />
-            <div className="absolute inset-0 rounded-full border-2 border-accent/20 animate-pulse-slow" />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-cyber-light mb-4">
-            <span className="neon-text glitch-hover">Kuro</span>
-            <span className="text-cyber-light/80"> - 資安工作者的學習手記</span>
+            <span className="gradient-text glitch-hover">Kuro</span>
+            <span className="text-cyber-light/80 typing-cursor"> - 資安工作者的學習手記</span>
           </h1>
           <p className="text-xl text-cyber-light/60 mb-6">
             Cyber Security Consultant | Medium Blogger | Scuba Diver | APP Developer
@@ -33,7 +32,7 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section className="mb-16">
+      <section className="mb-16 scroll-fade-in delay-100">
         <SectionTitle emoji="🚀" title="我的作品" />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           <ProjectCard
@@ -54,7 +53,7 @@ export default function Home() {
       </section>
 
       {/* Categories Section */}
-      <section className="mb-16">
+      <section className="mb-16 scroll-fade-in delay-200">
         <SectionTitle emoji="📚" title="文章分類" />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((category) => (
@@ -64,14 +63,14 @@ export default function Home() {
       </section>
 
       {/* Latest Articles Section */}
-      <section>
+      <section className="scroll-fade-in delay-300">
         <div className="flex items-center justify-between mb-8">
-          <h2 className="text-3xl font-bold text-cyber-light">
+          <h2 className="text-3xl font-bold gradient-text">
             📌 最新文章
           </h2>
           <Link
             href="/articles"
-            className="text-accent hover:text-accent-pink transition-colors font-semibold group flex items-center gap-1"
+            className="electric-button px-4 py-2 rounded-lg border border-accent/40 text-accent hover:text-white transition-colors font-semibold group flex items-center gap-1"
           >
             查看全部 
             <span className="group-hover:translate-x-1 transition-transform">→</span>
@@ -89,8 +88,9 @@ export default function Home() {
 
 function SectionTitle({ emoji, title }: { emoji: string; title: string }) {
   return (
-    <h2 className="text-3xl font-bold text-cyber-light mb-8 text-center">
-      {emoji} {title}
+    <h2 className="text-3xl font-bold mb-8 text-center">
+      <span className="mr-2">{emoji}</span>
+      <span className="gradient-text">{title}</span>
     </h2>
   );
 }
@@ -107,7 +107,7 @@ function ProjectCard({ href, emoji, title, description, cta }: {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group cyber-card rounded-xl p-6"
+      className="group border-flow rounded-xl p-6 hover:scale-[1.02] transition-transform duration-300"
     >
       <div className="flex items-start gap-4">
         <div className="text-5xl">{emoji}</div>
@@ -116,7 +116,7 @@ function ProjectCard({ href, emoji, title, description, cta }: {
             {title}
           </h3>
           <p className="text-cyber-light/60 text-sm mb-3">{description}</p>
-          <div className="flex items-center text-accent text-sm font-semibold">
+          <div className="flex items-center text-accent text-sm font-semibold electric-button px-3 py-1 rounded w-fit">
             <span>{cta}</span>
             <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

@@ -112,3 +112,184 @@ body {
   0% { left: -50%; }
   100% { left: 150%; }
 }
+
+/* Typing cursor blink */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Neon breathing glow */
+@keyframes neonBreath {
+  0%, 100% { 
+    text-shadow: 0 0 10px rgba(0,255,255,0.5), 0 0 20px rgba(0,255,255,0.3), 0 0 30px rgba(0,255,255,0.2);
+  }
+  50% { 
+    text-shadow: 0 0 20px rgba(0,255,255,0.8), 0 0 40px rgba(0,255,255,0.5), 0 0 60px rgba(0,255,255,0.3);
+  }
+}
+
+/* Border light flow */
+@keyframes borderFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Scroll fade in */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hologram scan effect */
+@keyframes hologramScan {
+  0% { top: -100%; }
+  100% { top: 200%; }
+}
+
+/* Electric pulse */
+@keyframes electricPulse {
+  0%, 100% { 
+    box-shadow: 0 0 5px rgba(0,255,255,0.3);
+  }
+  25% { 
+    box-shadow: 0 0 10px rgba(0,255,255,0.6), 0 0 20px rgba(0,255,255,0.4);
+  }
+  50% { 
+    box-shadow: 0 0 15px rgba(0,255,255,0.8), 0 0 30px rgba(0,255,255,0.5), 0 0 40px rgba(0,255,255,0.3);
+  }
+  75% { 
+    box-shadow: 0 0 10px rgba(0,255,255,0.6), 0 0 20px rgba(0,255,255,0.4);
+  }
+}
+
+@layer components {
+  /* Neon breathing effect for logo */
+  .neon-breath {
+    animation: neonBreath 3s ease-in-out infinite;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    background: linear-gradient(90deg, #00ffff, #ff0080, #8000ff, #00ffff);
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: borderFlow 4s ease infinite;
+  }
+
+  /* Typing cursor */
+  .typing-cursor::after {
+    content: '|';
+    animation: blink 1s step-end infinite;
+    color: #00ffff;
+    margin-left: 2px;
+  }
+
+  /* Scroll animation */
+  .scroll-fade-in {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  /* Staggered animation delays */
+  .delay-100 { animation-delay: 0.1s; }
+  .delay-200 { animation-delay: 0.2s; }
+  .delay-300 { animation-delay: 0.3s; }
+  .delay-400 { animation-delay: 0.4s; }
+  .delay-500 { animation-delay: 0.5s; }
+
+  /* Border flow card */
+  .border-flow {
+    position: relative;
+    background: linear-gradient(145deg, rgba(26,26,46,0.8) 0%, rgba(10,10,15,0.9) 100%);
+    backdrop-filter: blur(10px);
+  }
+
+  .border-flow::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(90deg, #00ffff, #ff0080, #8000ff, #00ffff);
+    background-size: 300% 100%;
+    animation: borderFlow 4s linear infinite;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  /* Hologram avatar */
+  .hologram-avatar {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hologram-avatar::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(0,255,255,0.1) 50%,
+      transparent 100%
+    );
+    animation: hologramScan 3s linear infinite;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .hologram-avatar::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: 
+      0 0 15px rgba(0,255,255,0.3),
+      inset 0 0 15px rgba(0,255,255,0.1);
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  /* Electric button */
+  .electric-button {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .electric-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(0,255,255,0.4),
+      transparent
+    );
+    transition: left 0.5s ease;
+  }
+
+  .electric-button:hover::before {
+    left: 100%;
+  }
+
+  .electric-button:hover {
+    animation: electricPulse 1s ease-in-out infinite;
+  }
+}

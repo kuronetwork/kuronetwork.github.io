@@ -10,7 +10,7 @@ export default function ArticleCard({ article }: ArticleCardProps) {
       href={article.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="block p-4 rounded-lg cyber-card group"
+      className="block p-4 rounded-lg border-flow group hover:scale-[1.01] transition-transform duration-300"
     >
       <div className="flex items-start justify-between gap-4">
         <div className="flex-1">
