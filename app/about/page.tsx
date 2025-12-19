@@ -128,7 +128,7 @@ export default function AboutPage() {
             "中華民國健身運動協會 - 體適能健身C級指導員",
             "PADI - Rescue Diver 救援潛水員",
             "SSI - React Right Specialty 正確反應員",
-            "ANITD - Deep Diver 深度潛水員",
+            "IANTD - Deep Diver 深度潛水員",
             "SDI - Advanced Scuba Diver 進階水肺潛水員",
             "ADS International - OpenWater Diver 開放水域潛水員",
             "ADS International - EAN STANDARD DIVER 高氧潛水員"
