@@ -34,8 +34,8 @@ export const articles: Article[] = [
   { id: 37, title: "資訊安全-金融業資訊安全技術法規要求簡介", category: "資訊安全", url: "https://medium.com/blacksecurity/資訊安全-金融業資訊安全技術法規要求簡介-d3bb8d66a308" },
 
   // 雲端運算
-  { id: 62, title: "使用AWS CloudFront 的原始存取控制(OAC)建立安全的 S3 靜態網站", category: "雲端運算", url: "https://medium.com/blacksecurity/aws-cloudfront-oac-5805d27b3a7a" },
-  { id: 24, title: "AZ-900 Microsoft Azure Fundamentals 自修考試心得與準備資料", category: "雲端運算", url: "https://medium.com/@kuroH/az-900-microsoft-azure-fundamentals-d0718175de65" },
+  { id: 62, title: "使用AWS CloudFront 的原始存取控制(OAC)建立安全的 S3 靜態網站", category: "雲端運算與安全", url: "https://medium.com/blacksecurity/aws-cloudfront-oac-5805d27b3a7a" },
+  { id: 24, title: "AZ-900 Microsoft Azure Fundamentals 自修考試心得與準備資料", category: "雲端運算與安全", url: "https://medium.com/@kuroH/az-900-microsoft-azure-fundamentals-d0718175de65" },
 
   // CTF / 滲透測試
   { id: 36, title: "Root me — Zone Transfer Write-up", category: "CTF/滲透測試", url: "https://medium.com/blacksecurity/root-me-dns-zone-transfer-write-up-596dc252c98b" },
@@ -60,15 +60,15 @@ export const articles: Article[] = [
   { id: 18, title: "[Cisco] RIP、EIGRP、OSPF 路由協定比較", category: "網路管理", url: "https://medium.com/blacksecurity/cisco-rip-eigrp-ospf簡易比較-9ef5ae58f6d0" },
 
   // 讀書心得
-  { id: 17, title: "聊聊 2021 的Medium 年度經營結果", category: "讀書心得", url: "https://medium.com/blacksecurity/medium2021-a76ee341a9a3" },
-  { id: 16, title: "聊聊 2020 的Medium 年度經營結果", category: "讀書心得", url: "https://medium.com/blacksecurity/kuro-2020-medium-746c09f8631b" },
-  { id: 15, title: "我真的需要考證照嗎? 考證照對就業會有幫助嗎? 一篇考證照的思考與效益分析", category: "讀書心得", url: "https://medium.com/blacksecurity/benefits-of-certifications-ec8880639df8" },
-  { id: 14, title: "麥肯錫新人邏輯思考5堂課：只要一小時，就可學會一生受用的邏輯思考法則 讀後筆記", category: "讀書心得", url: "https://medium.com/blacksecurity/beginnersonlogicalthinking-ebced3971142" },
-  { id: 13, title: "2019 Medium 歷程與檢視", category: "讀書心得", url: "https://medium.com/blacksecurity/2019-medium-1609f1a76582" },
-  { id: 12, title: "解憂咖啡館 — 咖啡的溫度也是人性的溫度 讀後感", category: "讀書心得", url: "https://medium.com/blacksecurity/解憂咖啡館-咖啡的溫度也是人性的溫度-讀後感-b2ef57809e9b" },
-  { id: 11, title: "[讀書心得]關於人生的7項財務思考：7堂一定要懂的理財投資×人生規劃必修課", category: "讀書心得", url: "https://medium.com/blacksecurity/讀書心得-關於人生的7項財務思考-7堂一定要懂的理財投資-人生規劃必修課-c57d7e7805af" },
-  { id: 10, title: "[讀書心得]目標管理的力量Par2:目標管理，七步驟做好目標管理", category: "讀書心得", url: "https://medium.com/blacksecurity/讀書心得-目標管理的力量-目標管理-92020d932ca0" },
-  { id: 9, title: "[讀書心得]目標管理的力量Par1:自我與人生管理篇", category: "讀書心得", url: "https://medium.com/blacksecurity/讀書心得-目標管理的力量-自我與人生管理-1f0707033fce" },
+  { id: 17, title: "聊聊 2021 的Medium 年度經營結果", category: "讀書心得與雜談", url: "https://medium.com/blacksecurity/medium2021-a76ee341a9a3" },
+  { id: 16, title: "聊聊 2020 的Medium 年度經營結果", category: "讀書心得與雜談", url: "https://medium.com/blacksecurity/kuro-2020-medium-746c09f8631b" },
+  { id: 15, title: "我真的需要考證照嗎? 考證照對就業會有幫助嗎? 一篇考證照的思考與效益分析", category: "讀書心得與雜談", url: "https://medium.com/blacksecurity/benefits-of-certifications-ec8880639df8" },
+  { id: 14, title: "麥肯錫新人邏輯思考5堂課：只要一小時，就可學會一生受用的邏輯思考法則 讀後筆記", category: "讀書心得與雜談", url: "https://medium.com/blacksecurity/beginnersonlogicalthinking-ebced3971142" },
+  { id: 13, title: "2019 Medium 歷程與檢視", category: "讀書心得與雜談", url: "https://medium.com/blacksecurity/2019-medium-1609f1a76582" },
+  { id: 12, title: "解憂咖啡館 — 咖啡的溫度也是人性的溫度 讀後感", category: "讀書心得與雜談", url: "https://medium.com/blacksecurity/解憂咖啡館-咖啡的溫度也是人性的溫度-讀後感-b2ef57809e9b" },
+  { id: 11, title: "[讀書心得]關於人生的7項財務思考：7堂一定要懂的理財投資×人生規劃必修課", category: "讀書心得與雜談", url: "https://medium.com/blacksecurity/讀書心得-關於人生的7項財務思考-7堂一定要懂的理財投資-人生規劃必修課-c57d7e7805af" },
+  { id: 10, title: "[讀書心得]目標管理的力量Par2:目標管理，七步驟做好目標管理", category: "讀書心得與雜談", url: "https://medium.com/blacksecurity/讀書心得-目標管理的力量-目標管理-92020d932ca0" },
+  { id: 9, title: "[讀書心得]目標管理的力量Par1:自我與人生管理篇", category: "讀書心得與雜談", url: "https://medium.com/blacksecurity/讀書心得-目標管理的力量-自我與人生管理-1f0707033fce" },
 
   // 理財投資
   { id: 8, title: "存股方法-不敗教主的300張股票存股術 讀後心得", category: "理財投資", url: "https://medium.com/blacksecurity/300-stocks-6efb9618c35f" },
@@ -86,9 +86,9 @@ const categoryDefinitions = [
   { name: "資訊安全", icon: "🔒", description: "證照考試、資安治理、技術分析" },
   { name: "CTF/滲透測試", icon: "💻", description: "CTF Write-ups、滲透測試實戰" },
   { name: "網路管理", icon: "🌐", description: "Cisco、VMware、Azure 網路技術" },
-  { name: "讀書心得", icon: "📖", description: "個人成長、思考方法、年度回顧" },
+  { name: "讀書心得與雜談", icon: "📖", description: "個人成長、思考方法、年度回顧" },
   { name: "理財投資", icon: "💰", description: "股票投資、存股策略、技術分析" },
-  { name: "雲端運算", icon: "☁️", description: "Cloud、雲端技術、雲端安全" },
+  { name: "雲端運算與安全", icon: "☁️", description: "Cloud、雲端技術、雲端安全" },
 ];
 
 // 自動計算每個分類的文章數量
