@@ -7,6 +7,8 @@ export interface Article {
 
 export const articles: Article[] = [
   // 資訊安全
+  { id: 100, title: "Certification 與 Certificate ，你的資安證照是證照嗎？還是一個證明?", category: "資訊安全", url: "https://medium.com/blacksecurity/certificationandcertificate-fd65974c9c46" },
+  { id: 98, title: "EC-Council ECIH 資安危機處理員認證考試準備心得", category: "資訊安全", url: "https://medium.com/blacksecurity/ecih-813469149d4e " },
   { id: 71, title: "釣魚測試(Phishing Tests) VS. 消防演練(Fire Drills) — 有趣的觀點微分析", category: "資訊安全", url: "https://medium.com/blacksecurity/firedrill-a0763fcbc35d" },
   { id: 61, title: "資安思維、強韌身心：資安人的健康啟示 — 為什麼要運動？將資安觀念套用到你的日常生活，提升你的身體韌性！", category: "資訊安全", url: "https://medium.com/blacksecurity/workout-d40a34b19194" },
   { id: 60, title: "EC-Council CEH Practical / Master 準備心得 — 讓理論與實作相輔相成的學習", category: "資訊安全", url: "https://medium.com/blacksecurity/ceh-practical-master-3e80cac180a2" },
@@ -35,6 +37,7 @@ export const articles: Article[] = [
   { id: 37, title: "資訊安全-金融業資訊安全技術法規要求簡介", category: "資訊安全", url: "https://medium.com/blacksecurity/資訊安全-金融業資訊安全技術法規要求簡介-d3bb8d66a308" },
 
   // 雲端運算與安全
+  { id: 99, title: "AWS 架構安全評估工具 — AWS Well-Architected Tool", category: "雲端運算與安全", url: "https://medium.com/blacksecurity/awswellarchitected-43bbddf39abb" },
   { id: 97, title: "從被動到主動：利用 AWS SecurityAgent 實現自動化 Design review與 Code review", category: "雲端運算與安全", url: "https://medium.com/blacksecurity/designreview-7a8e936a1045" },
   { id: 96, title: "從被動到主動：利用 AWS SecurityAgent 實現自動化滲透測試 （Penetration Testing)", category: "雲端運算與安全", url: "https://medium.com/blacksecurity/secagentpt-bdc1a14e860b" },
   { id: 95, title: "Amazon Kiro Enterprise Security Integration: Getting Started with AWS IAM Identity Center and Security Management (Kiro for Enterprise)", category: "雲端運算與安全", url: "https://medium.com/blacksecurity/amazon-kiro-enterprise-b39782221648" },
