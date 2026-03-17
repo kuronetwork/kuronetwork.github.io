@@ -15,7 +15,7 @@ export default function AboutPage() {
             此外，Kuro 多次擔任公開演講者及受邀擔任企業專業訓練講師，致力於業界推動資訊安全、雲端安全與人才培育，期望提升台灣資安從業者的專業能力。Kuro 為 AWS Community Builder - Security 組的貢獻者，ISACA 2021年四張證照前 Top3 ，EC-Council CEH Master Leaderboard 第一名，並持有 CISSP、CCSP、AWS SAA、AWS AIF、GCP ACE、CISM、CISA、CGEIT、CDPSE、CRISC、CEH Master 等超過 40 張專業國際認證，經驗與資格橫跨資安技術、資安治理、資訊管理、資料保護、網路技術安全、駭客攻防、資安事故回應、產品安全、威脅情資、資安稽核、雲端安全、人工智慧安全等領域。
           </p>
           <p className="text-lg leading-relaxed text-cyber-light/90 mt-4">
-            同時對於水肺潛水、戶外活動、體驗新事物很有興趣，歡迎揪團出玩！
+            同時對於水肺潛水、戶外活動、體驗新事物很有興趣，歡迎揪團出去玩，體驗潛水!
           </p>
         </div>
 
@@ -87,6 +87,7 @@ export default function AboutPage() {
             "ISACA CGEIT | 國際企業資訊治理師 (2021 Taiwan Top1)",
             "ISACA CDPSE | 國際資訊隱私防護師",
             "ISO/IEC 27001 Lead Auditor | ISO 27001 主導稽核員",
+            "ISO/IEC 42001 Lead Auditor | ISO 42001 主導稽核員",
             "ISO/IEC 27001 Internal Auditor | ISO 27001 內部稽核員",
             "ISO 9001 Internal Auditor | ISO 9001 內部稽核員",
             "ACCISO | Associate Certified Chief Information Security Officer"
@@ -126,6 +127,7 @@ export default function AboutPage() {
           ]} />
           <CertCard title="Sports" color="teal" certs={[
             "中華民國健身運動協會 - 體適能健身C級指導員",
+            "PADI - Divemaster 潛水長",
             "PADI - Rescue Diver 救援潛水員",
             "SSI - React Right Specialty 正確反應員",
             "IANTD - Deep Diver 深度潛水員",
