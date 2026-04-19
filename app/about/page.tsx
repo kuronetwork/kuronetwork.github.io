@@ -50,6 +50,7 @@ export default function AboutPage() {
               <li>• CloudSummit 2025 Speaker</li>
               <li>• Infosec Taiwan 2025 Speaker</li>
               <li>• AWS Summit 2025 Speaker</li>
+              <li>• CyberSec 2026 Speaker</li>
             </ul>
           </div>
           <div className="cyber-card rounded-lg p-5">
@@ -70,7 +71,7 @@ export default function AboutPage() {
         <SectionTitle emoji="🌐" title="社群志工" />
         <div className="space-y-4 mb-12">
           <CommunityCard title="AWS Community" description="2025 AWS Community Builder (Category: Security) / 2024 AWS Community Day" />
-          <CommunityCard title="HITCON (Hacks in Taiwan Conference) 台灣駭客年會" description="2018門機組長 / 2019餐飲副組長 / 2020門機組員 / 2021門機組長 / 2024場務組副組長 / 2025 Cyber Range贊助組長 / 2025 HITCON場務組副組長" />
+          <CommunityCard title="HITCON (Hacks in Taiwan Conference) 台灣駭客年會" description="2018門機組長 / 2019餐飲副組長 / 2020門機組員 / 2021門機組長 / 2024場務組副組長 / 2025 Cyber Range贊助組長 / 2025 HITCON場務組副組長 / 2026 HITCON副召集人" />
           <CommunityCard title="COSCUP (Conference for Open Source Coders, Users and Promoters) 開源人年會" description="2016攤位股 / 2018門機股 / 2020門機股長 / 2022門機股長 / 2023門機股長 / 2024門機股長 / 2025門機股長" />
           <CommunityCard title="SITCON (Students' Information Technology Conference) 學生計算機年會" description="2016/2017 議程組組員" />
         </div>

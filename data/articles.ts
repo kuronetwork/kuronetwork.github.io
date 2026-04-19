@@ -8,7 +8,7 @@ export interface Article {
 export const articles: Article[] = [
   // 資訊安全
   { id: 100, title: "Certification 與 Certificate ，你的資安證照是證照嗎？還是一個證明?", category: "資訊安全", url: "https://medium.com/blacksecurity/certificationandcertificate-fd65974c9c46" },
-  { id: 98, title: "EC-Council ECIH 資安危機處理員認證考試準備心得", category: "資訊安全", url: "https://medium.com/blacksecurity/ecih-813469149d4e " },
+  { id: 98, title: "EC-Council ECIH 資安危機處理員認證考試準備心得", category: "資訊安全", url: "https://medium.com/blacksecurity/ecih-813469149d4e" },
   { id: 71, title: "釣魚測試(Phishing Tests) VS. 消防演練(Fire Drills) — 有趣的觀點微分析", category: "資訊安全", url: "https://medium.com/blacksecurity/firedrill-a0763fcbc35d" },
   { id: 61, title: "資安思維、強韌身心：資安人的健康啟示 — 為什麼要運動？將資安觀念套用到你的日常生活，提升你的身體韌性！", category: "資訊安全", url: "https://medium.com/blacksecurity/workout-d40a34b19194" },
   { id: 60, title: "EC-Council CEH Practical / Master 準備心得 — 讓理論與實作相輔相成的學習", category: "資訊安全", url: "https://medium.com/blacksecurity/ceh-practical-master-3e80cac180a2" },
@@ -50,7 +50,7 @@ export const articles: Article[] = [
   { id: 83, title: "AWS Certified AI Practitioner (AIF-C01)心得分享、準備教材與資訊安全", category: "雲端運算與安全", url: "https://medium.com/blacksecurity/aws-certified-ai-practitioner-aif-c01-5d345edb6624" },
   { id: 82, title: "GCP IAM Security — 使用 PAM 強化特權帳號管理", category: "雲端運算與安全", url: "https://medium.com/blacksecurity/gcp-iam-security-chinese-729961b29297" },
   { id: 81, title: "GCP IAM Security — Enhancing Privileged Account Management with PAM", category: "雲端運算與安全", url: "https://medium.com/blacksecurity/gcp-iam-security-eng-39a743e86078" },
-  { id: 80, title: "在 Windows 安裝WSL 執行Scirpt 以進行 AWS 資源盤點：解決 AWS SecurityAudit Policy限制", category: "雲端運算與安全", url: "https://medium.com/blacksecurity/aws-asset-inventory-400daeb1f733" },
+  { id: 80, title: "在 Windows 安裝WSL 執行Script 以進行 AWS 資源盤點：解決 AWS SecurityAudit Policy限制", category: "雲端運算與安全", url: "https://medium.com/blacksecurity/aws-asset-inventory-400daeb1f733" },
   { id: 79, title: "Running Custom Scripts on Windows WSL for AWS Resource Inventory: Addressing AWS SecurityAudit Policy Restrictions", category: "雲端運算與安全", url: "https://medium.com/blacksecurity/aws-script-inventory-5c0477603508" },
   { id: 78, title: "Securiti Education — Al Security & Governance Course Study Note", category: "雲端運算與安全", url: "https://medium.com/blacksecurity/al-security-governance-certification-study-note-f2e475110fb2" },
   { id: 77, title: "The Use and Introduction of Confidential Computing on AWS, Azure, and GCP", category: "雲端運算與安全", url: "https://medium.com/blacksecurity/confidential-computing-f4bcf8827963" },

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo, Suspense } from 'react';
+import { useState, useMemo, Suspense, useEffect } from 'react';
 import { articles, categories } from '@/data/articles';
 import ArticleCard from '@/components/ArticleCard';
 import { useSearchParams } from 'next/navigation';
@@ -8,9 +8,13 @@ import { useSearchParams } from 'next/navigation';
 function ArticlesContent() {
   const searchParams = useSearchParams();
   const categoryParam = searchParams.get('category');
-  
+
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState(categoryParam || '全部');
+
+  useEffect(() => {
+    setSelectedCategory(categoryParam || '全部');
+  }, [categoryParam]);
 
   const filteredArticles = useMemo(() => {
     return articles

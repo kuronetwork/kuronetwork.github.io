@@ -1,11 +1,29 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isProjectsOpen, setIsProjectsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsProjectsOpen(false);
+      }
+    }
+    function handleEscape(event: KeyboardEvent) {
+      if (event.key === 'Escape') setIsProjectsOpen(false);
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('keydown', handleEscape);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleEscape);
+    };
+  }, []);
 
   return (
     <header className="sticky top-0 z-50 bg-primary/90 backdrop-blur-xl border-b border-accent/20 scan-line">
@@ -26,10 +44,9 @@ export default function Header() {
             <NavLink href="/contact">聯絡</NavLink>
             
             {/* Projects Dropdown */}
-            <div className="relative">
+            <div className="relative" ref={dropdownRef}>
               <button
                 onClick={() => setIsProjectsOpen(!isProjectsOpen)}
-                onBlur={() => setTimeout(() => setIsProjectsOpen(false), 200)}
                 className="text-cyber-light/80 hover:text-accent transition-all duration-300 flex items-center gap-1 relative group"
               >
                 我的作品
