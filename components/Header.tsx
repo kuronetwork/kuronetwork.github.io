@@ -1,163 +1,192 @@
-'use client';
+'use client'
 
-import Link from 'next/link';
-import { useState, useRef, useEffect } from 'react';
+import Link from 'next/link'
+import { useState, useRef, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isProjectsOpen, setIsProjectsOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isProjectsOpen, setIsProjectsOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+  const dropdownRef = useRef<HTMLDivElement>(null)
+  const pathname = usePathname()
+
+  useEffect(() => {
+    function handleScroll() {
+      setScrolled(window.scrollY > 80)
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setIsProjectsOpen(false);
+        setIsProjectsOpen(false)
       }
     }
     function handleEscape(event: KeyboardEvent) {
-      if (event.key === 'Escape') setIsProjectsOpen(false);
+      if (event.key === 'Escape') {
+        setIsProjectsOpen(false)
+        setIsMenuOpen(false)
+      }
     }
-    document.addEventListener('mousedown', handleClickOutside);
-    document.addEventListener('keydown', handleEscape);
+    document.addEventListener('mousedown', handleClickOutside)
+    document.addEventListener('keydown', handleEscape)
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-      document.removeEventListener('keydown', handleEscape);
-    };
-  }, []);
+      document.removeEventListener('mousedown', handleClickOutside)
+      document.removeEventListener('keydown', handleEscape)
+    }
+  }, [])
+
+  useEffect(() => {
+    setIsMenuOpen(false)
+  }, [pathname])
 
   return (
-    <header className="sticky top-0 z-50 bg-primary/90 backdrop-blur-xl border-b border-accent/20 scan-line">
-      <nav className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
-          <Link 
-            href="/" 
-            className="text-2xl font-cyber font-bold cyber-logo glitch-hover"
-          >
-            KURO
-          </Link>
+    <header
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        scrolled ? 'bg-nav-bg/95 backdrop-blur-sm border-b border-surface' : 'bg-transparent'
+      }`}
+    >
+      <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        {/* Logo */}
+        <Link href="/" className="font-display italic text-xl text-ink hover:text-red transition-colors">
+          Kuro
+        </Link>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
-            <NavLink href="/">首頁</NavLink>
-            <NavLink href="/articles">文章索引</NavLink>
-            <NavLink href="/about">關於我</NavLink>
-            <NavLink href="/contact">聯絡</NavLink>
-            
-            {/* Projects Dropdown */}
-            <div className="relative" ref={dropdownRef}>
-              <button
-                onClick={() => setIsProjectsOpen(!isProjectsOpen)}
-                className="text-cyber-light/80 hover:text-accent transition-all duration-300 flex items-center gap-1 relative group"
+        {/* Desktop Nav */}
+        <div className="hidden md:flex items-center gap-8">
+          <Link href="/" className={`nav-link ${pathname === '/' ? 'active' : ''}`}>首頁</Link>
+          <Link href="/articles" className={`nav-link ${pathname === '/articles' ? 'active' : ''}`}>文章</Link>
+          <Link href="/about" className={`nav-link ${pathname === '/about' ? 'active' : ''}`}>關於我</Link>
+          <Link href="/contact" className={`nav-link ${pathname === '/contact' ? 'active' : ''}`}>聯絡我</Link>
+
+          {/* Projects dropdown */}
+          <div className="relative" ref={dropdownRef}>
+            <button
+              onClick={() => setIsProjectsOpen(!isProjectsOpen)}
+              className={`nav-link flex items-center gap-1 ${isProjectsOpen ? 'active' : ''}`}
+            >
+              作品
+              <svg
+                className={`w-3 h-3 transition-transform duration-200 ${isProjectsOpen ? 'rotate-180' : ''}`}
+                fill="none" stroke="currentColor" viewBox="0 0 24 24"
               >
-                我的作品
-                <svg className="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-accent to-accent-purple transition-all duration-300 group-hover:w-full" />
-              </button>
-              
-              {isProjectsOpen && (
-                <div className="absolute top-full right-0 mt-3 w-56 cyber-card rounded-lg py-2 z-[100]">
-                  <ProjectLink href="https://explorediving.org/" emoji="🤿" title="探索潛水APP" />
-                  <ProjectLink href="https://aleriskcalc.kuronetwork.me/" emoji="📊" title="ALE Risk Calc" />
-                </div>
-              )}
-            </div>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-cyber-light hover:text-accent transition-colors"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {isMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
-        </div>
-
-        {/* Mobile Menu Overlay */}
-        {isMenuOpen && (
-          <>
-            {/* Backdrop */}
-            <div 
-              className="md:hidden fixed inset-0 top-[65px] bg-primary/80 backdrop-blur-sm z-[90]"
-              onClick={() => setIsMenuOpen(false)}
-            />
-            {/* Menu Content */}
-            <div className="md:hidden absolute left-0 right-0 top-full bg-primary border-b border-accent/20 px-4 pb-4 space-y-4 pt-4 z-[100] shadow-lg shadow-black/50">
-              <MobileNavLink href="/" onClick={() => setIsMenuOpen(false)}>首頁</MobileNavLink>
-              <MobileNavLink href="/articles" onClick={() => setIsMenuOpen(false)}>文章索引</MobileNavLink>
-              <MobileNavLink href="/about" onClick={() => setIsMenuOpen(false)}>關於我</MobileNavLink>
-              <MobileNavLink href="/contact" onClick={() => setIsMenuOpen(false)}>聯絡</MobileNavLink>
-              
-              <div className="border-t border-accent/20 pt-4 mt-4">
-                <p className="text-sm text-accent/60 mb-2">我的作品</p>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            {isProjectsOpen && (
+              <div className="absolute top-full right-0 mt-3 w-52 bg-nav-bg border border-surface rounded-lg shadow-lg py-2 z-[100]">
                 <a
                   href="https://explorediving.org/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block pl-4 py-2 text-cyber-light/80 hover:text-accent transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
+                  className="block px-4 py-2.5 font-ui text-sm text-warm-gray hover:text-ink hover:bg-surface transition-colors"
                 >
-                  🤿 探索潛水APP
+                  探索潛水 APP
                 </a>
                 <a
                   href="https://aleriskcalc.kuronetwork.me/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block pl-4 py-2 text-cyber-light/80 hover:text-accent transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
+                  className="block px-4 py-2.5 font-ui text-sm text-warm-gray hover:text-ink hover:bg-surface transition-colors"
                 >
-                  📊 ALE Risk Calc
+                  ALE Risk Calc
                 </a>
               </div>
-            </div>
-          </>
-        )}
+            )}
+          </div>
+        </div>
+
+        {/* Mobile hamburger */}
+        <button
+          className="md:hidden text-ink hover:text-red transition-colors p-1"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            {isMenuOpen ? (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
+            ) : (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
+            )}
+          </svg>
+        </button>
       </nav>
+
+      {/* Mobile Drawer */}
+      <div
+        className={`md:hidden fixed inset-0 bg-ink/20 backdrop-blur-sm z-[90] transition-opacity duration-300 ${
+          isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        }`}
+        onClick={() => setIsMenuOpen(false)}
+      />
+      <div
+        className={`md:hidden fixed top-0 right-0 h-full w-[280px] bg-nav-bg shadow-2xl z-[100] transition-transform duration-300 ease-out ${
+          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
+      >
+        <div className="flex justify-between items-center px-6 py-4 border-b border-surface">
+          <span className="font-display italic text-lg text-ink">Kuro</span>
+          <button onClick={() => setIsMenuOpen(false)} className="text-warm-gray hover:text-ink transition-colors">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <nav className="px-6 py-4 flex flex-col">
+          <MobileNavLink href="/" active={pathname === '/'} onClick={() => setIsMenuOpen(false)}>首頁</MobileNavLink>
+          <MobileNavLink href="/articles" active={pathname === '/articles'} onClick={() => setIsMenuOpen(false)}>文章</MobileNavLink>
+          <MobileNavLink href="/about" active={pathname === '/about'} onClick={() => setIsMenuOpen(false)}>關於我</MobileNavLink>
+          <MobileNavLink href="/contact" active={pathname === '/contact'} onClick={() => setIsMenuOpen(false)}>聯絡我</MobileNavLink>
+          <div className="mt-4 pt-4 border-t border-surface">
+            <p className="font-ui text-xs text-warm-gray mb-3 uppercase tracking-widest">作品</p>
+            <a
+              href="https://explorediving.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block py-2.5 font-ui text-sm text-warm-gray hover:text-ink transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              探索潛水 APP
+            </a>
+            <a
+              href="https://aleriskcalc.kuronetwork.me/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block py-2.5 font-ui text-sm text-warm-gray hover:text-ink transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              ALE Risk Calc
+            </a>
+          </div>
+        </nav>
+      </div>
     </header>
-  );
+  )
 }
 
-function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
+function MobileNavLink({
+  href,
+  active,
+  onClick,
+  children,
+}: {
+  href: string
+  active: boolean
+  onClick: () => void
+  children: React.ReactNode
+}) {
   return (
-    <Link 
-      href={href} 
-      className="text-cyber-light/80 hover:text-accent transition-all duration-300 relative group"
-    >
-      {children}
-      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-accent to-accent-purple transition-all duration-300 group-hover:w-full" />
-    </Link>
-  );
-}
-
-function MobileNavLink({ href, onClick, children }: { href: string; onClick: () => void; children: React.ReactNode }) {
-  return (
-    <Link 
-      href={href} 
-      className="block text-cyber-light/80 hover:text-accent transition-colors"
-      onClick={onClick}
-    >
-      {children}
-    </Link>
-  );
-}
-
-function ProjectLink({ href, emoji, title }: { href: string; emoji: string; title: string }) {
-  return (
-    <a
+    <Link
       href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="block px-4 py-2 text-cyber-light/80 hover:text-accent hover:bg-accent/5 transition-all"
+      onClick={onClick}
+      className={`block py-3 font-ui text-base border-b border-surface transition-colors ${
+        active ? 'text-ink font-semibold' : 'text-warm-gray hover:text-ink'
+      }`}
     >
-      {emoji} {title}
-    </a>
-  );
+      {children}
+    </Link>
+  )
 }
