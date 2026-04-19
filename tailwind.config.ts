@@ -1,47 +1,45 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss'
 
 const config: Config = {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
   darkMode: 'class',
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ['var(--font-noto)', 'system-ui', 'sans-serif'],
-        cyber: ['var(--font-orbitron)', 'monospace'],
-        tech: ['var(--font-rajdhani)', 'sans-serif'],
-      },
       colors: {
-        primary: '#0a0a0f',
-        secondary: '#1a1a2e',
-        accent: '#00ffff',
-        'accent-pink': '#ff0080',
-        'accent-purple': '#8000ff',
-        'accent-blue': '#0066cc',
-        success: '#00ff41',
-        'cyber-gray': '#64748b',
-        'cyber-light': '#f1f5f9',
+        cream:       '#F4F0E8',
+        ink:         '#111111',
+        red:         '#CC2200',
+        'warm-gray': '#8A7F72',
+        surface:     '#EDE9E0',
+        'nav-bg':    '#FDFCF9',
+        'red-light': '#F5EAE7',
       },
-      boxShadow: {
-        'neon': '0 0 5px #00ffff, 0 0 10px rgba(0,255,255,0.3)',
-        'neon-pink': '0 0 5px #ff0080, 0 0 10px rgba(255,0,128,0.3)',
-        'neon-hover': '0 0 15px #00ffff, 0 0 30px rgba(0,255,255,0.4)',
+      fontFamily: {
+        display: ['var(--font-display)', 'var(--font-body)', 'sans-serif'],
+        body:    ['var(--font-body)', 'sans-serif'],
+        ui:      ['var(--font-ui)', 'var(--font-body)', 'sans-serif'],
+        mono:    ['var(--font-mono)', 'monospace'],
       },
       animation: {
-        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        'glow': 'glow 2s ease-in-out infinite alternate',
+        'fade-up':     'fadeUp 0.7s ease-out both',
+        'clip-reveal': 'clipReveal 0.8s cubic-bezier(0.16,1,0.3,1) both',
       },
       keyframes: {
-        glow: {
-          '0%': { boxShadow: '0 0 5px #00ffff, 0 0 10px rgba(0,255,255,0.2)' },
-          '100%': { boxShadow: '0 0 10px #00ffff, 0 0 20px rgba(0,255,255,0.4)' },
+        fadeUp: {
+          '0%':   { opacity: '0', transform: 'translateY(24px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        clipReveal: {
+          '0%':   { clipPath: 'inset(0 0 100% 0)' },
+          '100%': { clipPath: 'inset(-4px 0 -4px 0)' },
         },
       },
     },
   },
   plugins: [],
-};
-export default config;
+}
+export default config
