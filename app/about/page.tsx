@@ -62,6 +62,7 @@ export default function AboutPage() {
             <ul className="space-y-2">
               {[
                 { text: 'ISC2 Taipei Chapter - ISC2 台北分會 理監事成員 (2022 - now) | 會員交流與專業發展委員會', href: 'https://www.isc2chapter.tw/' },
+                { text: 'Association of Hackers in Taiwan | 台灣駭客協會 會員', href: 'https://hacker.org.tw/' },
                 { text: 'ISC2, International Information System Security Certification Consortium | 國際資訊系統安全認證協會' },
                 { text: 'ISACA, Information Systems Audit and Control Association | 國際電腦稽核協會' },
                 { text: 'CAA, Computer Audit Association | 中國民國電腦稽核協會會員' },
@@ -100,7 +101,7 @@ export default function AboutPage() {
                 </ul>
               </div>
               <div>
-                <p className="font-ui text-xs tracking-widest uppercase text-warm-gray mb-4">Training & Education</p>
+                <p className="font-ui text-xs tracking-widest uppercase text-warm-gray mb-4">Professional Training & Lectures</p>
                 <ul className="space-y-2 font-body text-sm text-ink/85">
                   {[
                     'HITCON 菁英人才培育 × 攻防論壇業界專家',
