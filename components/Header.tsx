@@ -51,8 +51,8 @@ export default function Header() {
     >
       <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="font-display italic text-xl text-ink hover:text-red transition-colors">
-          Kuro
+        <Link href="/" className="flex items-center">
+          <DecryptLogo />
         </Link>
 
         {/* Desktop Nav */}
@@ -128,7 +128,9 @@ export default function Header() {
         }`}
       >
         <div className="flex justify-between items-center px-6 py-4 border-b border-surface">
-          <span className="font-display italic text-lg text-ink">Kuro</span>
+          <div className="flex items-center" onClick={() => setIsMenuOpen(false)}>
+            <DecryptLogo />
+          </div>
           <button onClick={() => setIsMenuOpen(false)} className="text-warm-gray hover:text-ink transition-colors">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
@@ -189,4 +191,48 @@ function MobileNavLink({
       {children}
     </Link>
   )
+}
+
+function DecryptLogo() {
+  const [text, setText] = useState('010101010101');
+  const [trigger, setTrigger] = useState(0);
+
+  useEffect(() => {
+    let iteration = 0;
+    const TARGET = 'root@kuro:~#';
+    const CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&*!';
+    let interval: NodeJS.Timeout;
+
+    const startDecoding = () => {
+      clearInterval(interval);
+      interval = setInterval(() => {
+        setText(
+          TARGET.split('').map((char, index) => {
+            if (iteration > index * 5) {
+              return char;
+            }
+            return CHARS[Math.floor(Math.random() * CHARS.length)];
+          }).join('')
+        );
+
+        if (iteration >= TARGET.length * 5) {
+          clearInterval(interval);
+          setText(TARGET);
+        }
+        iteration += 1;
+      }, 40);
+    };
+
+    startDecoding();
+    return () => clearInterval(interval);
+  }, [trigger]);
+
+  return (
+    <span 
+      className="font-mono font-bold tracking-tight text-lg md:text-xl text-ink hover:text-red transition-colors"
+      onMouseEnter={() => setTrigger(v => v + 1)}
+    >
+      {text}
+    </span>
+  );
 }

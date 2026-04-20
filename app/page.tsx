@@ -29,14 +29,14 @@ export default function Home() {
           <div className="flex-1 min-w-0">
             <div className="overflow-hidden">
               <h1
-                className="font-display text-[clamp(4.5rem,11vw,8.5rem)] leading-[0.9] text-ink animate-clip-reveal"
+                className="font-body font-bold text-5xl md:text-[4rem] leading-[1] text-ink tracking-tight animate-clip-reveal"
                 style={{ animationDelay: '0s' }}
               >
-                KURO
+                Kuro
               </h1>
             </div>
 
-            <hr className="red-rule my-5 max-w-[180px]" />
+            <hr className="h-[2px] border-none bg-warm-gray/30 my-5 max-w-[180px]" />
 
             <div className="overflow-hidden">
               <p

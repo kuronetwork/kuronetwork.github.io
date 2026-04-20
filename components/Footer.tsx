@@ -1,10 +1,9 @@
 export default function Footer() {
   return (
-    <footer className="mt-24 border-t border-red/50">
+    <footer className="mt-24 border-t border-surface">
       <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
-          <p className="font-display italic text-lg text-ink">Kuro</p>
-          <p className="font-mono text-sm text-warm-gray mt-1">
+          <p className="font-mono text-sm text-warm-gray">
             © {new Date().getFullYear()} Kuro. All rights reserved.
           </p>
         </div>
