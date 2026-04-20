@@ -44,8 +44,9 @@ export default function Header() {
   }, [pathname])
 
   return (
-    <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${
+    <>
+      <header
+        className={`sticky top-0 z-50 transition-all duration-300 ${
         scrolled ? 'bg-nav-bg/95 backdrop-blur-sm border-b border-surface' : 'bg-transparent'
       }`}
     >
@@ -114,6 +115,7 @@ export default function Header() {
           </svg>
         </button>
       </nav>
+    </header>
 
       {/* Mobile Drawer */}
       <div
@@ -165,7 +167,7 @@ export default function Header() {
           </div>
         </nav>
       </div>
-    </header>
+    </>
   )
 }
 
