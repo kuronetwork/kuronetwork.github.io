@@ -3,9 +3,9 @@ import TableOfContents from '@/components/TableOfContents'
 const TOC_SECTIONS = [
   { id: 'intro',        label: '簡介' },
   { id: 'work',         label: '工作經驗' },
-  { id: 'org',          label: '專業組織' },
+  { id: 'org',          label: '參與專業組織資格' },
   { id: 'speaking',     label: '演講經歷' },
-  { id: 'community',    label: '社群志工' },
+  { id: 'community',    label: '社群志工與經營社群經歷' },
   { id: 'certs',        label: '專業證照' },
 ]
 
@@ -32,7 +32,7 @@ export default function AboutPage() {
                 此外，Kuro 多次擔任公開演講者及受邀擔任企業專業訓練講師，致力於業界推動資訊安全、雲端安全與人才培育，期望提升台灣資安從業者的專業能力。Kuro 為 AWS Community Builder - Security 組的貢獻者，ISACA 2021年四張證照前 Top3，EC-Council CEH Master Leaderboard 第一名，並持有 CISSP、CCSP、AWS SAA、AWS AIF、GCP ACE、CISM、CISA、CGEIT、CDPSE、CRISC、CEH Master 等超過 40 張專業國際認證，經驗與資格橫跨資安技術、資安治理、資訊管理、資料保護、網路技術安全、駭客攻防、資安事故回應、產品安全、威脅情資、資安稽核、雲端安全、人工智慧安全等領域。
               </p>
               <p>
-                同時對於水肺潛水、戶外活動、體驗新事物很有興趣，歡迎揪團出去玩，體驗潛水！
+                目前為PADI 潛水長同時對於水肺潛水、戶外活動、體驗新事物很有興趣，歡迎揪團出去玩，體驗潛水！
               </p>
             </div>
           </section>
@@ -42,8 +42,8 @@ export default function AboutPage() {
             <h2 className="section-title font-ui text-sm font-bold tracking-widest uppercase">工作經驗</h2>
             <ul className="space-y-2">
               {[
+                'ASUS - Information Security 資安架構師/資安策略規劃師',
                 '鑑智實相科技 - 資安顧問',
-                'High-tech Manufacturing Industry - Information Security 高科技製造業 資安架構師/資安策略規劃師',
                 'Ernst & Young (EY) - CyberSecurity Consultant 安永企業管理諮詢 資安架構顧問',
                 'Deloitte - CyberSecurity Consultant 勤業眾信聯合會計師事務所 資安管理暨技術顧問',
                 'Financial Industry - Information System Security 金融業 資安管理',
@@ -58,7 +58,7 @@ export default function AboutPage() {
 
           {/* 專業組織 */}
           <section id="org" className="mt-16">
-            <h2 className="section-title font-ui text-sm font-bold tracking-widest uppercase">專業組織</h2>
+            <h2 className="section-title font-ui text-sm font-bold tracking-widest uppercase">參與專業組織資格</h2>
             <ul className="space-y-2">
               {[
                 { text: 'ISC2 Taipei Chapter - ISC2 台北分會 理監事成員 (2022 - now) | 會員交流與專業發展委員會', href: 'https://www.isc2chapter.tw/' },
@@ -67,6 +67,7 @@ export default function AboutPage() {
                 { text: 'ISACA, Information Systems Audit and Control Association | 國際電腦稽核協會' },
                 { text: 'CAA, Computer Audit Association | 中國民國電腦稽核協會會員' },
                 { text: 'AWS Community, AWS Community Builder (Category: Security)' },
+                { text: 'PADI, Professional Association of Diving Instructors | 專業潛水教練協會 會員', href: 'https://www.padi.com.tw/' },
               ].map((item) => (
                 <li key={item.text} className="flex gap-3">
                   <span className="text-red mt-1 flex-shrink-0">▸</span>
@@ -120,7 +121,7 @@ export default function AboutPage() {
 
           {/* 社群志工 */}
           <section id="community" className="mt-16">
-            <h2 className="section-title font-ui text-sm font-bold tracking-widest uppercase">社群志工</h2>
+            <h2 className="section-title font-ui text-sm font-bold tracking-widest uppercase">社群志工與經營社群經歷</h2>
             <div className="space-y-4">
               {[
                 {
