@@ -151,6 +151,13 @@ export default function Home() {
             description="資安風險量化計算工具，協助企業評估年度預期損失（ALE），進行風險管理決策。"
             cta="立即使用"
           />
+          <ProjectCard
+            href="https://dive.kuronetwork.me/"
+            subtitle="Web Tool"
+            title="潛水旅遊裝備檢查表"
+            description="潛水旅遊出發前的裝備清單工具，幫助潛水員系統性確認所有必備裝備，避免遺漏。"
+            cta="立即使用"
+          />
         </div>
       </section>
 
