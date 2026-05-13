@@ -95,6 +95,14 @@ export default function Header() {
                 >
                   ALE Risk Calc
                 </a>
+                <a
+                  href="https://dive.kuronetwork.me/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-4 py-2.5 font-ui text-sm text-warm-gray hover:text-ink hover:bg-surface transition-colors"
+                >
+                  潛水旅遊裝備檢查表
+                </a>
               </div>
             )}
           </div>
@@ -163,6 +171,15 @@ export default function Header() {
               onClick={() => setIsMenuOpen(false)}
             >
               ALE Risk Calc
+            </a>
+            <a
+              href="https://dive.kuronetwork.me/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block py-2.5 font-ui text-sm text-warm-gray hover:text-ink transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              潛水旅遊裝備檢查表
             </a>
           </div>
         </nav>
