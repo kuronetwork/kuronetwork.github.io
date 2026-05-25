@@ -32,7 +32,7 @@ export default function AboutPage() {
                 此外，Kuro 多次擔任公開演講者及受邀擔任企業專業訓練講師，致力於業界推動資訊安全、雲端安全與人才培育，期望提升台灣資安從業者的專業能力。Kuro 為 AWS Community Builder - Security 組的貢獻者，ISACA 2021年四張證照前 Top3，EC-Council CEH Master Leaderboard 第一名，並持有 CISSP、CCSP、AWS SAA、AWS AIF、GCP ACE、CISM、CISA、CGEIT、CDPSE、CRISC、CEH Master 等超過 40 張專業國際認證，經驗與資格橫跨資安技術、資安治理、資訊管理、資料保護、網路技術安全、駭客攻防、資安事故回應、產品安全、威脅情資、資安稽核、雲端安全、人工智慧安全等領域。
               </p>
               <p>
-                目前為PADI 潛水長同時對於水肺潛水、戶外活動、體驗新事物很有興趣，歡迎揪團出去玩，體驗潛水！
+                目前為 PADI 潛水長，同時持有 SCA 國際咖啡師認證，對於水肺潛水、戶外活動、咖啡與體驗新事物很有興趣，歡迎揪團出去玩！
               </p>
             </div>
           </section>
@@ -219,7 +219,7 @@ export default function AboutPage() {
                 'ISO/IEC 17025 實驗室品質管理訓練合格（APP檢測實驗室）',
               ]} />
 
-              <CertCard title="Sports" count={8} certs={[
+              <CertCard title="Sports & Lifestyle" count={9} certs={[
                 '中華民國健身運動協會 - 體適能健身C級指導員',
                 'PADI - Divemaster 潛水長',
                 'PADI - Rescue Diver 救援潛水員',
@@ -228,6 +228,7 @@ export default function AboutPage() {
                 'SDI - Advanced Scuba Diver 進階水肺潛水員',
                 'ADS International - OpenWater Diver 開放水域潛水員',
                 'ADS International - EAN STANDARD DIVER 高氧潛水員',
+                'SCA Barista Skills | Specialty Coffee Association 國際咖啡師認證',
               ]} />
 
             </div>
