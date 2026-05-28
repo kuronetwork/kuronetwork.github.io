@@ -91,6 +91,7 @@ export const articles: Article[] = [
   { id: 18, title: "[Cisco] RIP、EIGRP、OSPF 路由協定比較", category: "網路管理", url: "https://medium.com/blacksecurity/cisco-rip-eigrp-ospf簡易比較-9ef5ae58f6d0" },
 
   // 讀書心得與雜談
+  { id: 101, title: "我跑去考了 SCA Barista 義式咖啡師 初中級認證 — 比考資安證照更辛苦的過程", category: "讀書心得與雜談", url: "https://medium.com/@kuroH/sca-barista-be44cbdc2398" },
   { id: 93, title: "資安 x 潛水 x 應變— Rescue Diver 救援潛水員證照訓練心得", category: "讀書心得與雜談", url: "https://medium.com/blacksecurity/rescue-diver-5fc7e3734038" },
   { id: 92, title: "有限資源，無限賽局-為何優秀的畢業生，都只能往科技業擠？從資安推動角度看就業選擇", category: "讀書心得與雜談", url: "https://medium.com/blacksecurity/securityjob-life-b63c1bbc7ed5" },
   { id: 91, title: "常見壺鈴訓練動作中英文對照表 Kettlebell Exercise Terminology: Chinese-English Reference", category: "讀書心得與雜談", url: "https://medium.com/blacksecurity/kettlebellenglish-57ccc15f7748" },

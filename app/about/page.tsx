@@ -221,6 +221,7 @@ export default function AboutPage() {
 
               <CertCard title="Sports & Lifestyle" count={9} certs={[
                 '中華民國健身運動協會 - 體適能健身C級指導員',
+                'Specialty Coffee Association (SCA) 精品咖啡協會 - 義式咖啡師初級與中級認證',
                 'PADI - Divemaster 潛水長',
                 'PADI - Rescue Diver 救援潛水員',
                 'SSI - React Right Specialty 正確反應員',
@@ -228,7 +229,6 @@ export default function AboutPage() {
                 'SDI - Advanced Scuba Diver 進階水肺潛水員',
                 'ADS International - OpenWater Diver 開放水域潛水員',
                 'ADS International - EAN STANDARD DIVER 高氧潛水員',
-                'SCA Barista Skills | Specialty Coffee Association 國際咖啡師認證',
               ]} />
 
             </div>
