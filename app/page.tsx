@@ -52,7 +52,7 @@ export default function Home() {
                 className="font-ui text-sm tracking-wide text-warm-gray animate-clip-reveal leading-relaxed"
                 style={{ animationDelay: '0.3s' }}
               >
-                Cyber Security Consultant | Medium Blogger | Scuba Diver | APP Developer
+                Cyber Security Consultant | Medium Blogger | Scuba Diver | APP Developer | Barista
               </p>
             </div>
 
@@ -61,7 +61,7 @@ export default function Home() {
                 className="cert-tag animate-clip-reveal"
                 style={{ animationDelay: '0.45s' }}
               >
-                CISSP · CCSP · AWS Community Builder
+                CISSP · CCSP · AWS Community Builder · PADI Divemaster · SCA Barista Skills
               </p>
             </div>
 
