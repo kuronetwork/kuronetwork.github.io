@@ -103,6 +103,14 @@ export default function Header() {
                 >
                   潛水旅遊裝備檢查表
                 </a>
+                <a
+                  href="https://coffee.kuronetwork.me/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-4 py-2.5 font-ui text-sm text-warm-gray hover:text-ink hover:bg-surface transition-colors"
+                >
+                  咖啡科學學習筆記
+                </a>
               </div>
             )}
           </div>
@@ -180,6 +188,15 @@ export default function Header() {
               onClick={() => setIsMenuOpen(false)}
             >
               潛水旅遊裝備檢查表
+            </a>
+            <a
+              href="https://coffee.kuronetwork.me/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block py-2.5 font-ui text-sm text-warm-gray hover:text-ink transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              咖啡科學學習筆記
             </a>
           </div>
         </nav>

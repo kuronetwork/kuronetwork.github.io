@@ -158,6 +158,13 @@ export default function Home() {
             description="潛水旅遊出發前的裝備清單工具，幫助潛水員系統性確認所有必備裝備，避免遺漏。"
             cta="立即使用"
           />
+          <ProjectCard
+            href="https://coffee.kuronetwork.me/"
+            subtitle="Coffee Learning Notes"
+            title="咖啡科學學習筆記"
+            description="咖啡科學的學習筆記，包涵 SCA 咖啡證照考試、涵蓋萃取科學、感官評估、烘焙與義式咖啡。"
+            cta="開始閱讀"
+          />
         </div>
       </section>
 
