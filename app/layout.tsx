@@ -4,6 +4,7 @@ import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import ScrollRevealInit from '@/components/ScrollRevealInit'
+import { websiteSchema, personSchema } from '@/lib/schema'
 
 const instrumentSerif = Instrument_Serif({
   subsets: ['latin'],
@@ -37,12 +38,38 @@ const firaCode = Fira_Code({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://kuronetwork.me'),
-  title: 'Kuro - 資安工作者的學習手記',
-  description: 'Cyber Security Consultant | Medium Blogger - 分享資安、網路、證照與技術文章',
-  keywords: '資安, cybersecurity, network, 證照, CISSP, CCSP, CISA',
+  title: {
+    default: 'Kuro | 資安顧問與 AWS Community Builder 的學習筆記',
+    template: '%s | Kuro Network',
+  },
+  description:
+    'CISSP、CCSP 持證資安顧問 Kuro 的個人網站，分享資安治理、雲端安全、滲透測試與 40+ 張國際認證準備心得。',
+  keywords: '資安, cybersecurity, network, 證照, CISSP, CCSP, CISA, AWS, 雲端安全',
+  authors: [{ name: 'Kuro', url: 'https://kuronetwork.me' }],
+  creator: 'Kuro',
+  publisher: 'Kuro',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  alternates: {
+    canonical: '/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
-    title: 'Kuro - 資安工作者的學習手記',
-    description: 'Cyber Security Consultant | Medium Blogger - 分享資安、網路、證照與技術文章',
+    title: 'Kuro | 資安顧問與 AWS Community Builder 的學習筆記',
+    description:
+      'CISSP、CCSP 持證資安顧問 Kuro 的個人網站，分享資安治理、雲端安全、滲透測試與 40+ 張國際認證準備心得。',
     url: 'https://kuronetwork.me',
     siteName: 'Kuro Network',
     locale: 'zh_TW',
@@ -51,8 +78,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Kuro - 資安工作者的學習手記',
-    description: 'Cyber Security Consultant | Medium Blogger - 分享資安、網路、證照與技術文章',
+    title: 'Kuro | 資安顧問與 AWS Community Builder 的學習筆記',
+    description:
+      'CISSP、CCSP 持證資安顧問 Kuro 的個人網站，分享資安治理、雲端安全、滲透測試與 40+ 張國際認證準備心得。',
     creator: '@catkuroH',
     images: ['/images/avatar.jpg'],
   },
@@ -68,6 +96,15 @@ export default function RootLayout({
       <body
         className={`${instrumentSerif.variable} ${notoSansTC.variable} ${syne.variable} ${firaCode.variable} font-body bg-cream text-ink`}
       >
+        <script
+          type="application/ld+json"
+          // JSON-LD payload is built from constants in lib/schema.ts; no user input.
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
         <ScrollRevealInit />
         <Header />
         <main className="min-h-screen">

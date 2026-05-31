@@ -1,3 +1,25 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: '聯絡 Kuro | 合作邀約、演講邀請與社群連結',
+  description:
+    '想合作、邀請演講或交流資安主題？這裡有 Kuro 的所有聯絡管道與社群帳號（Email、Twitter、LinkedIn、Medium）。',
+  alternates: {
+    canonical: 'https://kuronetwork.me/contact/',
+  },
+  openGraph: {
+    title: '聯絡 Kuro | 合作邀約、演講邀請與社群連結',
+    description: 'Kuro 的所有聯絡管道與社群帳號。',
+    url: 'https://kuronetwork.me/contact/',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '聯絡 Kuro | 合作邀約、演講邀請與社群連結',
+    description: 'Kuro 的所有聯絡管道與社群帳號。',
+  },
+}
+
 export default function ContactPage() {
   return (
     <div className="min-h-[80vh] flex flex-col justify-center max-w-2xl mx-auto px-6 py-16">

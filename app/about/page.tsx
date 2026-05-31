@@ -1,4 +1,28 @@
+import type { Metadata } from 'next'
 import TableOfContents from '@/components/TableOfContents'
+import { profilePageSchema } from '@/lib/schema'
+
+export const metadata: Metadata = {
+  title: '關於 Kuro | 資安顧問、CISSP/CCSP、演講與職涯',
+  description:
+    'Kuro Huang 的職涯、證照與社群介紹：橫跨高科技製造業、金融業與顧問業的資安實務經驗，CyberSec 演講者、HITCON 志工、40+ 張國際資安認證。',
+  alternates: {
+    canonical: 'https://kuronetwork.me/about/',
+  },
+  openGraph: {
+    title: '關於 Kuro | 資安顧問、CISSP/CCSP、演講與職涯',
+    description:
+      'Kuro Huang 的職涯、證照與社群介紹：資安架構、雲端安全、演講經歷、社群志工與 40+ 張國際認證。',
+    url: 'https://kuronetwork.me/about/',
+    type: 'profile',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '關於 Kuro | 資安顧問、CISSP/CCSP、演講與職涯',
+    description:
+      'Kuro Huang 的職涯、演講經歷、社群志工與 40+ 張國際認證介紹。',
+  },
+}
 
 const TOC_SECTIONS = [
   { id: 'intro',        label: '簡介' },
@@ -12,6 +36,10 @@ const TOC_SECTIONS = [
 export default function AboutPage() {
   return (
     <div className="max-w-6xl mx-auto px-6 py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(profilePageSchema) }}
+      />
       <h1 className="font-display text-4xl text-ink mb-12">
         About <span className="italic">Kuro</span>
       </h1>
