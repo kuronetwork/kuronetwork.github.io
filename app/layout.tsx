@@ -96,6 +96,16 @@ export default function RootLayout({
       <body
         className={`${instrumentSerif.variable} ${notoSansTC.variable} ${syne.variable} ${firaCode.variable} font-body bg-cream text-ink`}
       >
+        {/* Progressive enhancement: scroll-reveal sections start hidden and are
+            revealed by IntersectionObserver. Without JS, force them visible so
+            FeaturedArticles / Projects are never blank. */}
+        <noscript>
+          <style
+            dangerouslySetInnerHTML={{
+              __html: '.scroll-reveal{opacity:1!important;transform:none!important}',
+            }}
+          />
+        </noscript>
         <script
           type="application/ld+json"
           // JSON-LD payload is built from constants in lib/schema.ts; no user input.

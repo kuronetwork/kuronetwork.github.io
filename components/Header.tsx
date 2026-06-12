@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useState, useRef, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
+import { projects } from '@/data/projects'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -79,38 +80,17 @@ export default function Header() {
             </button>
             {isProjectsOpen && (
               <div className="absolute top-full right-0 mt-3 w-52 bg-nav-bg border border-surface rounded-lg shadow-lg py-2 z-[100]">
-                <a
-                  href="https://explorediving.org/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-2.5 font-ui text-sm text-warm-gray hover:text-ink hover:bg-surface transition-colors"
-                >
-                  探索潛水 APP
-                </a>
-                <a
-                  href="https://aleriskcalc.kuronetwork.me/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-2.5 font-ui text-sm text-warm-gray hover:text-ink hover:bg-surface transition-colors"
-                >
-                  ALE Risk Calc
-                </a>
-                <a
-                  href="https://dive.kuronetwork.me/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-2.5 font-ui text-sm text-warm-gray hover:text-ink hover:bg-surface transition-colors"
-                >
-                  潛水旅遊裝備檢查表
-                </a>
-                <a
-                  href="https://coffee.kuronetwork.me/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-2.5 font-ui text-sm text-warm-gray hover:text-ink hover:bg-surface transition-colors"
-                >
-                  咖啡科學學習筆記
-                </a>
+                {projects.map((project) => (
+                  <a
+                    key={project.href}
+                    href={project.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-4 py-2.5 font-ui text-sm text-warm-gray hover:text-ink hover:bg-surface transition-colors"
+                  >
+                    {project.title}
+                  </a>
+                ))}
               </div>
             )}
           </div>
@@ -162,42 +142,18 @@ export default function Header() {
           <MobileNavLink href="/contact" active={pathname === '/contact'} onClick={() => setIsMenuOpen(false)}>聯絡我</MobileNavLink>
           <div className="mt-4 pt-4 border-t border-surface">
             <p className="font-ui text-xs text-warm-gray mb-3 uppercase tracking-widest">作品</p>
-            <a
-              href="https://explorediving.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block py-2.5 font-ui text-sm text-warm-gray hover:text-ink transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              探索潛水 APP
-            </a>
-            <a
-              href="https://aleriskcalc.kuronetwork.me/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block py-2.5 font-ui text-sm text-warm-gray hover:text-ink transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              ALE Risk Calc
-            </a>
-            <a
-              href="https://dive.kuronetwork.me/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block py-2.5 font-ui text-sm text-warm-gray hover:text-ink transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              潛水旅遊裝備檢查表
-            </a>
-            <a
-              href="https://coffee.kuronetwork.me/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block py-2.5 font-ui text-sm text-warm-gray hover:text-ink transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              咖啡科學學習筆記
-            </a>
+            {projects.map((project) => (
+              <a
+                key={project.href}
+                href={project.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block py-2.5 font-ui text-sm text-warm-gray hover:text-ink transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {project.title}
+              </a>
+            ))}
           </div>
         </nav>
       </div>
