@@ -145,6 +145,13 @@ export default function Home() {
             cta="探索更多"
           />
           <ProjectCard
+            href="https://kiro.kuronetwork.me"
+            subtitle="Developer Guide"
+            title="Amazon Kiro 繁體中文指引"
+            description="Amazon Kiro AI IDE 的繁體中文使用指引，涵蓋安裝設定、Spec 與 Agentic 開發工作流程，協助開發者快速上手 AI 輔助開發。"
+            cta="查看指引"
+          />
+          <ProjectCard
             href="https://aleriskcalc.kuronetwork.me/"
             subtitle="Web Tool"
             title="ALE Risk Calc"
