@@ -39,7 +39,7 @@ const firaCode = Fira_Code({
 export const metadata: Metadata = {
   metadataBase: new URL('https://kuronetwork.me'),
   title: {
-    default: 'Kuro | 資安顧問與 AWS Community Builder 的學習筆記',
+    default: '資安工作者的學習手記',
     template: '%s | Kuro Network',
   },
   description:
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Kuro | 資安顧問與 AWS Community Builder 的學習筆記',
+    title: '資安工作者的學習手記',
     description:
       'CISSP、CCSP 持證資安顧問 Kuro 的個人網站，分享資安治理、雲端安全、滲透測試與 40+ 張國際認證準備心得。',
     url: 'https://kuronetwork.me',
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Kuro | 資安顧問與 AWS Community Builder 的學習筆記',
+    title: '資安工作者的學習手記',
     description:
       'CISSP、CCSP 持證資安顧問 Kuro 的個人網站，分享資安治理、雲端安全、滲透測試與 40+ 張國際認證準備心得。',
     creator: '@catkuroH',
