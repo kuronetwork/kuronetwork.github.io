@@ -57,7 +57,7 @@ export default function AboutPage() {
                 Kuro 深耕資訊安全領域多年，從學生時期熱衷參與資安社群活動，並經營部落格「Kuro 的資安學習手記」，分享個人學習與實務經驗。曾於高科技製造業、金融業及四大會計師事務所任職，負責資安架構設計、雲端安全架構設計、GenAI 安全審查、產品安全設計審查、資安檢測、ISO 17025 實驗室維運、檢測實驗室報告簽署人、資安合規評估、資安稽核、資安成熟度與資安策略規劃等工作，具備甲乙雙方的多元視角與實戰經驗，在資安領域累積豐富的專案經歷。
               </p>
               <p>
-                此外，Kuro 多次擔任公開演講者及受邀擔任企業專業訓練講師，致力於業界推動資訊安全、雲端安全與人才培育，期望提升台灣資安從業者的專業能力。Kuro 為 AWS Community Builder - Security 組的貢獻者，ISACA 2021年四張證照前 Top3，EC-Council CEH Master Leaderboard 第一名，並持有 CISSP、CCSP、AWS SAA、AWS AIF、GCP ACE、CISM、CISA、CGEIT、CDPSE、CRISC、CEH Master 等超過 40 張專業國際認證，經驗與資格橫跨資安技術、資安治理、資訊管理、資料保護、網路技術安全、駭客攻防、資安事故回應、產品安全、威脅情資、資安稽核、雲端安全、人工智慧安全等領域。
+                此外，Kuro 多次擔任公開演講者及受邀擔任企業專業訓練講師，致力於業界推動資訊安全、雲端安全與人才培育，期望提升台灣資安從業者的專業能力。Kuro 現為台灣駭客協會理監事成員、ISC2 台北分會理監事成員，並與社群夥伴共同創辦 AWS User Group DevSecOps Taiwan。Kuro 亦為 AWS Community Builder - Security 組的貢獻者，ISACA 2021年四張證照前 Top3，EC-Council CEH Master Leaderboard 第一名，並持有 CISSP、CCSP、AWS SAA、AWS AIF、GCP ACE、CISM、CISA、CGEIT、CDPSE、CRISC、CEH Master 等超過 40 張專業國際認證，經驗與資格橫跨資安技術、資安治理、資訊管理、資料保護、網路技術安全、駭客攻防、資安事故回應、產品安全、威脅情資、資安稽核、雲端安全、人工智慧安全等領域。
               </p>
               <p>
                 目前為 PADI 潛水長，同時持有 SCA 國際咖啡師認證，對於水肺潛水、戶外活動、咖啡與體驗新事物很有興趣，歡迎揪團出去玩！
@@ -70,11 +70,12 @@ export default function AboutPage() {
             <h2 className="section-title font-ui text-sm font-bold tracking-widest uppercase">工作經驗</h2>
             <ul className="space-y-2">
               {[
-                'ASUS - Information Security 資安架構師/資安策略規劃師',
+                '金融支付 - 資安主管/ Head of Information Security',
+                'ASUS - 資安架構師/資安策略規劃師',
                 '鑑智實相科技 - 資安顧問',
                 'Ernst & Young (EY) - CyberSecurity Consultant 安永企業管理諮詢 資安架構顧問',
                 'Deloitte - CyberSecurity Consultant 勤業眾信聯合會計師事務所 資安管理暨技術顧問',
-                'Financial Industry - Information System Security 金融業 資安管理',
+                '金融保險 - 資安管理',
               ].map((item) => (
                 <li key={item} className="flex gap-3">
                   <span className="text-red mt-1 flex-shrink-0">▸</span>
@@ -90,7 +91,8 @@ export default function AboutPage() {
             <ul className="space-y-2">
               {[
                 { text: 'ISC2 Taipei Chapter - ISC2 台北分會 理監事成員 (2022 - now) | 會員交流與專業發展委員會', href: 'https://www.isc2chapter.tw/' },
-                { text: 'Association of Hackers in Taiwan | 台灣駭客協會 會員', href: 'https://hacker.org.tw/' },
+                { text: '台灣駭客協會 理監事會與委員會成員', href: 'https://hacker.org.tw/about/supervisor/' },
+                { text: 'AWS User Group DevSecOps Taiwan - 共同創辦人', href: 'https://awsug.com.tw/' },
                 { text: 'ISC2, International Information System Security Certification Consortium | 國際資訊系統安全認證協會' },
                 { text: 'ISACA, Information Systems Audit and Control Association | 國際電腦稽核協會' },
                 { text: 'CAA, Computer Audit Association | 中國民國電腦稽核協會會員' },
