@@ -11,6 +11,7 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
   const pathname = usePathname()
+  const current = pathname.replace(/\/$/, '') || '/'
 
   useEffect(() => {
     function handleScroll() {
@@ -59,10 +60,10 @@ export default function Header() {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
-          <Link href="/" className={`nav-link ${pathname === '/' ? 'active' : ''}`}>首頁</Link>
-          <Link href="/articles" className={`nav-link ${pathname === '/articles' ? 'active' : ''}`}>文章</Link>
-          <Link href="/about" className={`nav-link ${pathname === '/about' ? 'active' : ''}`}>關於我</Link>
-          <Link href="/contact" className={`nav-link ${pathname === '/contact' ? 'active' : ''}`}>聯絡我</Link>
+          <Link href="/" className={`nav-link ${current === '/' ? 'active' : ''}`}>首頁</Link>
+          <Link href="/articles" className={`nav-link ${current === '/articles' ? 'active' : ''}`}>文章</Link>
+          <Link href="/about" className={`nav-link ${current === '/about' ? 'active' : ''}`}>關於我</Link>
+          <Link href="/contact" className={`nav-link ${current === '/contact' ? 'active' : ''}`}>聯絡我</Link>
 
           {/* Projects dropdown */}
           <div className="relative" ref={dropdownRef}>
@@ -136,10 +137,10 @@ export default function Header() {
           </button>
         </div>
         <nav className="px-6 py-4 flex flex-col">
-          <MobileNavLink href="/" active={pathname === '/'} onClick={() => setIsMenuOpen(false)}>首頁</MobileNavLink>
-          <MobileNavLink href="/articles" active={pathname === '/articles'} onClick={() => setIsMenuOpen(false)}>文章</MobileNavLink>
-          <MobileNavLink href="/about" active={pathname === '/about'} onClick={() => setIsMenuOpen(false)}>關於我</MobileNavLink>
-          <MobileNavLink href="/contact" active={pathname === '/contact'} onClick={() => setIsMenuOpen(false)}>聯絡我</MobileNavLink>
+          <MobileNavLink href="/" active={current === '/'} onClick={() => setIsMenuOpen(false)}>首頁</MobileNavLink>
+          <MobileNavLink href="/articles" active={current === '/articles'} onClick={() => setIsMenuOpen(false)}>文章</MobileNavLink>
+          <MobileNavLink href="/about" active={current === '/about'} onClick={() => setIsMenuOpen(false)}>關於我</MobileNavLink>
+          <MobileNavLink href="/contact" active={current === '/contact'} onClick={() => setIsMenuOpen(false)}>聯絡我</MobileNavLink>
           <div className="mt-4 pt-4 border-t border-surface">
             <p className="font-ui text-xs text-warm-gray mb-3 uppercase tracking-widest">作品</p>
             {projects.map((project) => (

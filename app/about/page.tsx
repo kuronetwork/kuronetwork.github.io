@@ -70,7 +70,7 @@ export default function AboutPage() {
             <h2 className="section-title font-ui text-sm font-bold tracking-widest uppercase">工作經驗</h2>
             <ul className="space-y-2">
               {[
-                '金融支付 - 資安主管/ Head of Information Security',
+                '金融支付 - Head of Information Security',
                 'ASUS - 資安架構師/資安策略規劃師',
                 '鑑智實相科技 - 資安顧問',
                 'Ernst & Young (EY) - CyberSecurity Consultant 安永企業管理諮詢 資安架構顧問',
@@ -156,7 +156,7 @@ export default function AboutPage() {
               {[
                 {
                   title: 'HITCON (Hacks in Taiwan Conference) 台灣駭客年會',
-                  desc: '2018門機組長 / 2019餐飲副組長 / 2020門機組員 / 2021門機組長 / 2024場務組副組長 / 2025 Cyber Range贊助組長 / 2025 HITCON場務組副組長 / 2026 HITCON副召集人',
+                  desc: '2018門機組長 / 2019餐飲副組長 / 2020門機組員 / 2021門機組長 / 2024場務組副組長 / 2025 Cyber Range贊助組長 / 2025 HITCON場務組副組長 / 2026 HITCON副召集人 / 2026 HITCON CyberRange x CTF 活動論壇主持人',
                   href: 'https://hitcon.org/',
                 },
                 {
