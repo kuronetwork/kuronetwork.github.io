@@ -28,7 +28,7 @@ const TOC_SECTIONS = [
   { id: 'intro',        label: '簡介' },
   { id: 'work',         label: '工作經驗' },
   { id: 'org',          label: '參與專業組織資格' },
-  { id: 'speaking',     label: '演講經歷' },
+  { id: 'speaking',     label: '專業分享與服務經歷' },
   { id: 'community',    label: '社群志工與經營社群經歷' },
   { id: 'certs',        label: '專業證照' },
 ]
@@ -113,9 +113,9 @@ export default function AboutPage() {
             </ul>
           </section>
 
-          {/* 演講經歷 */}
+          {/* 專業分享與服務經歷 */}
           <section id="speaking" className="mt-16">
-            <h2 className="section-title font-ui text-sm font-bold tracking-widest uppercase">演講經歷</h2>
+            <h2 className="section-title font-ui text-sm font-bold tracking-widest uppercase">專業分享與服務經歷</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <p className="font-ui text-xs tracking-widest uppercase text-warm-gray mb-4">Conference Speaking</p>
@@ -129,20 +129,27 @@ export default function AboutPage() {
                   <li>· Infosec Taiwan 2025 Speaker</li>
                   <li>· AWS Summit 2025 Speaker</li>
                   <li>· CyberSec 2026 Speaker</li>
+                  <li>· HITCON 菁英人才培育 × 攻防論壇業界專家</li>
                 </ul>
               </div>
               <div>
                 <p className="font-ui text-xs tracking-widest uppercase text-warm-gray mb-4">Professional Training & Lectures</p>
                 <ul className="space-y-2 font-body text-sm text-ink/85">
                   {[
-                    'HITCON 菁英人才培育 × 攻防論壇業界專家',
                     '金融監理主管機關稽核能力訓練講師',
-                    '數位發展部資通安全署-資安職能會議',
                     '台科大資訊安全研究社',
                     '逢甲大學黑客社',
                     '台北商業大學資訊安全課程講座業師',
                     '中國科技大學資訊安全課程講座',
                     '多場金融機構講師：雲端安全、資安專業進修',
+                  ].map((item) => <li key={item}>· {item}</li>)}
+                </ul>
+
+                <p className="font-ui text-xs tracking-widest uppercase text-warm-gray mt-8 mb-4">Advisory & Review</p>
+                <ul className="space-y-2 font-body text-sm text-ink/85">
+                  {[
+                    '國家資通安全研究院人才培力中心｜「資安架構師專家諮詢會議」受邀專家',
+                    '國家資通安全研究院人才培力中心｜「資安稽核師職能項目」書面審查委員',
                   ].map((item) => <li key={item}>· {item}</li>)}
                 </ul>
               </div>
